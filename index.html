@@ -1,59 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=400px, initial-scale=1.0">
-    <title>Avatar</title>
-    
-    <!-- Icons and Colors -->
-    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
-    <link rel="manifest" href="./manifest.json">
-    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#000000">
-    <link rel="shortcut icon" href="./favicon.ico">
-    <meta name="msapplication-TileColor" content="#000000">
-    <meta name="msapplication-TileImage" content="./mstile-144x144.png">
-    <meta name="msapplication-config" content="./browserconfig.xml">
-    <meta name="theme-color" content="#000000">
-	<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
-
-    <link rel="stylesheet" href="css/avatarStyle.css">
-    <link rel="stylesheet" href="css/animations.css">
-
-    
-    <!-- Styles PWA -->
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Javascript --PWAs-->
-    <script>
-        if ("serviceWorker" in navigator) {
-            window.addEventListener("load", () => {
-                navigator.serviceWorker && navigator.serviceWorker.register("./sw.js");
-            });
-        }
-    </script>
-    <script defer="" src="./main.js"></script>
- 
-    <!-- Javascript Import -->
-    <script src="scripts/Libaries/html2canvas.js"></script>
-    <script src="scripts/export.js"></script>
-    <script src="scripts/importSeed.js"></script>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index Page</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Avatar</h1>
-    <div id="avatarDiv">
-        <p>Norbert</p>
-        <img src="./AvatarResources/graphic.svg" alt="Avatar" width="100%" height="100%">
-    </div>
-    <div class="exportButton-container">
-        <button class="exportButton" onclick="exportDivToJPEG()">Export as JPEG</button>
-    </div>
-    <div class="inputSeed-container">
-        <input type="text" id="seedInputField" placeholder="Code eingeben">
-        <button class="enterButton" onclick="saveInput">Enter</button>
-    </div>
+  <h1>Welcome to Our Website</h1>
+  <p>Select your device:</p>
+  <ul>
+    <li><a href="avatarPC.html">PC Version</a></li>
+    <li><a href="avatarPCV2.html">PC V2</a></li>
 
+    <li><a href="avatarMobile.html">Mobile Version</a></li>
+  </ul>
 </body>
 </html>

@@ -1,19 +1,33 @@
-.exportButton:hover {
-	-webkit-animation: shadow-pop-tr 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) forwards;
-	        animation: shadow-pop-tr 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) forwards;
-}
-
-.exportButton-container {
-    display: flex;
-    justify-content: center;
+body {
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #de9e9e;
+    overflow: hidden; /* Prevent scrolling */
 }
 
-/* Temporary */
-html, body {
-    width: 400px;
-    height: 800px;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+
+#animationCanvas {
+    border: 2px solid #000000;
+    background-color: #fdfdfd;
+}
+
+canvas {
+    object-fit: contain;
+    width: 200px; /* Display width */
+    height: 200px; /* Display height */
+    image-rendering: optimizeQuality; /* Improves image rendering quality */
+    border: 1px solid black;
+}
+
+#avatarDiv {
+    display: flex;
+    object-fit: contain;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
 }
