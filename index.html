@@ -1,53 +1,59 @@
 <!DOCTYPE html>
-<html lang="de">
-<!DOCTYPE html>
-
-
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>Avatar</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	<!-- Icons and Colors -->
-	<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
-	<link rel="manifest" href="./manifest.json">
-	<link rel="mask-icon" href="./safari-pinned-tab.svg" color="#000000">
-	<link rel="shortcut icon" href="./favicon.ico">
-	<meta name="msapplication-TileColor" content="#000000">
-	<meta name="msapplication-TileImage" content="./mstile-144x144.png">
-	<meta name="msapplication-config" content="./browserconfig.xml">
-	<meta name="theme-color" content="#000000">
-	
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=400px, initial-scale=1.0">
+    <title>Avatar</title>
+    
+    <!-- Icons and Colors -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#000000">
+    <link rel="shortcut icon" href="./favicon.ico">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-TileImage" content="./mstile-144x144.png">
+    <meta name="msapplication-config" content="./browserconfig.xml">
+    <meta name="theme-color" content="#000000">
+	<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
 
-	<!-- Styles -->
-	<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/avatarStyle.css">
+    <link rel="stylesheet" href="css/animations.css">
 
-	<!-- Javscript --PWAs-->
-	<script>
-		if ("serviceWorker" in navigator) {
-			window.addEventListener("load", () => {
-				navigator.serviceWorker && navigator.serviceWorker.register("./sw.js");
-			});
-		}
-	</script>
-	<script defer="" src="./main.js"></script>
+    
+    <!-- Styles PWA -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Javascript --PWAs-->
+    <script>
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", () => {
+                navigator.serviceWorker && navigator.serviceWorker.register("./sw.js");
+            });
+        }
+    </script>
+    <script defer="" src="./main.js"></script>
  
-    <!-- Javscript Export-->
+    <!-- Javascript Import -->
     <script src="scripts/Libaries/html2canvas.js"></script>
     <script src="scripts/export.js"></script>
+    <script src="scripts/importSeed.js"></script>
 
 </head>
-
 <body>
-    <h1>Avatarino</h1>
+    <h1>Avatar</h1>
     <div id="avatarDiv">
-        <p>AvatarToExport</p>
+        <p>Norbert</p>
         <img src="./AvatarResources/graphic.svg" alt="Avatar" width="100%" height="100%">
-		<p>Work</p>
     </div>
-    <button onclick="exportDivToJPEG()">Export as JPEG</button>
+    <div class="exportButton-container">
+        <button class="exportButton" onclick="exportDivToJPEG()">Export as JPEG</button>
+    </div>
+    <div class="inputSeed-container">
+        <input type="text" id="seedInputField" placeholder="Code eingeben">
+        <button class="enterButton" onclick="saveInput">Enter</button>
+    </div>
+
 </body>
 </html>

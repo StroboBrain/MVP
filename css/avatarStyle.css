@@ -1,0 +1,19 @@
+.exportButton:hover {
+	-webkit-animation: shadow-pop-tr 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) forwards;
+	        animation: shadow-pop-tr 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) forwards;
+}
+
+.exportButton-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Temporary */
+html, body {
+    width: 400px;
+    height: 800px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
