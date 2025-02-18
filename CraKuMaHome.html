@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
-    <title>Background Image Example</title>
+    <title>CraKuMa</title>
+
+    <!-- scripts -->
+    <script src="scripts/buttons.js"></script>
+
+
 </head>
 <body>
     <div class="screenRoot">
@@ -15,7 +20,7 @@
             <!-- Text in the Middle -->
             <div class="displayText">Text Anzeige</div>
             <!-- Right Button -->
-            <button>Avatar</button>
+            <button onclick="navigateToPage('CraKuMaAvatar.html')">Avatar</button>
           </div>
 
           <div class="settingToolbar toolbarBasics">
@@ -24,7 +29,7 @@
             <!-- Text in the Middle -->
             <div class="displayText">Text to display</div>
             <!-- Right Button -->
-            <button>?</button>
+            <button class="helpButton" onclick="helpButton()">?</button>
           </div>
           <div class="centerContent">
 
@@ -37,7 +42,7 @@
             <!-- Button 3-->
             <button>Right</button>
             <!-- Button 4-->
-            <button>Stats</button>
+            <button onclick = "navigateToPage('CraKuMaStats.html')">Stats</button>
           </div>
 
 
