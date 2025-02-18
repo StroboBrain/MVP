@@ -1,19 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+     
     <link rel="stylesheet" href="css/styles.css">
     <title>CraKuMa</title>
-
     <!-- scripts -->
     <script src="scripts/buttons.js"></script>
     <script src="scripts/SeedScripts/importSeed.js"></script>
+    <script src="scripts/scaling.js"></script>
+
 
 
 </head>
 <body>
     <div class="screenRoot">
+      <div class="appRoot">
         <div class="avatarBackground">
           <div class="displayToolbar toolbarBasics">
             <!-- Left Button -->
@@ -25,8 +29,8 @@
           </div>
 
           <div class="settingToolbar toolbarBasics">
-            <!-- Left Button -->
-            <button>Settings</button>
+            <!-- setting button -->
+            <button class="settingButton"></button>
             <!-- Text in the Middle -->
             <div class="displayText">Text to display</div>
             <!-- Right Button -->
@@ -47,6 +51,7 @@
           </div>
 
 
+        </div>
         </div>
     </div>
 </body>
