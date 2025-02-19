@@ -13,6 +13,8 @@ html, body {
   margin: 0;
   padding: 0;
   overflow: hidden; /* Prevent scrolling */
+  align-items: center;
+  flex-direction: column;
 }
 
 .screenRoot {
@@ -25,7 +27,6 @@ html, body {
 }
 
 /* This contaier will be resized*/
-
 .appRoot {
   height: 1920px;
   width: 1080px;
@@ -70,6 +71,7 @@ html, body {
 
 .displayCurrentLevel {
   font-family: 'Indie Flower', cursive; 
+  font-weight: bold;
   font-size: 1em;
 }
 
@@ -108,6 +110,15 @@ html, body {
 }
 
 /* Individual button styles */
+.crakumaLandButton{
+  font-weight: bold;
+  width: 50%;
+  background-color: var(--Buttoncolor-red-color);
+  font-size: 0.7em;
+  border-width: 7px;
+}
+
+
   .settingButton{
   margin-top: 10px;
   margin-bottom: 10px;
