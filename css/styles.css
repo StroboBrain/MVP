@@ -76,7 +76,8 @@ html, body {
 .button{
   height: 100%;
   border-radius: 20px;
-  border-width: 8px;
+  border-radius: 10px;
+  border-width: 5px;
   border-style: solid;
   border-color: var(--Bordercolor-blei-color);
 }
@@ -170,6 +171,8 @@ html, body {
 /* Navigation toolbar */
 
 .navigationToolbarButton{
+  
+
   border-width: 8px;
 }
 
