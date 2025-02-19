@@ -9,17 +9,14 @@
   --Bordercolor-blei-color: #212121;
   --Buttoncolor-grey-color: #D4DFEC;
   font-family: 'Arimo', sans-serif;
-
-
 }
 
-html, body {
+body {
   font-family: 'Arimo', sans-serif;
   margin: 0;
   padding: 0;
-  overflow: hidden; /* Prevent scrolling */
+  overflow: hidden;
   align-items: center;
-  flex-direction: column;
 }
 
 .screenRoot {
@@ -27,7 +24,7 @@ html, body {
   /* Was developped with 100vh, might needs adjustman */
   height: 100vh;
   width: 100vw;
-  flex-direction: row;
+
   align-items: center;
 }
 
@@ -36,7 +33,6 @@ html, body {
   height: 1920px;
   width: 1080px;
   transform-origin: top left; /* Ensure scaling starts from the top-left corner */
-  margin: 0 auto;
   overflow: hidden;
   font-size: 70px;
 }
@@ -78,10 +74,11 @@ html, body {
   border-color: var(--Bordercolor-blei-color);
 }
 
+/* Animation design*/
 
 .avatar{
-  margin: 1em;
-  height: 1em;
+  grid-row: 35/48;
+  grid-column: 12/20;
 }
 
 .displayCurrentLevelButton {
@@ -214,9 +211,7 @@ html, body {
 }
 
 
-
 /* Not used Styles 
-
   .settingButton{
   background-image: url("../ImageResources/Buttons/SettingsButtonCropped.png");
   background-size: contain; 

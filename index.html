@@ -15,35 +15,35 @@
     <script src="Scripts/buttons.js"></script>
     <script src="Scripts/SeedScripts/importSeed.js"></script>
     <script src="Scripts/scaling.js"></script>
+    <script src="Scripts/Animation/animation.js"></script>
 </head>
 
 <body>
-    <div class="screenRoot">
-      <div class="appRoot">
-        <!-- Div contains content-->
-        <div class="worldBackground">
-          <div class="gridContainer">
+  <div class="screenRoot">
+    <div class="appRoot">
+      <!-- Div contains content-->
+      <div class="worldBackground">
+        <div class="gridContainer">
           <!-- Header Toolbar-->
           <div class="headerToolbar toolbarBasics"></div>
           <button class="helpButton headerToolbarButton button" onclick="helpButton()"></button>
           <button class="headerTextButton headerToolbarButton button">CRAKUMA-LAND</button>
           <button class= "headerToolbarButton levelDisplay button">1</button>
-          <!-- Secdone Row-->
+          <!-- Seconde Row-->
           <button class="displayCurrentLevelButton"><b>Mathemeer</b></button>
+          <!-- Avatars -->
+          <div class="avatar avatar1"></div>
+
           <!-- Navigation Toolbar -->
           <div class="navigationToolbar toolbarBasics"></div>
-
           <button class="worldButton button navigationToolbarButtons"></button>
           <button class="leftArrowButton button navigationToolbarButtons"></button>
           <button class="rightArrowButton button navigationToolbarButtons"></button>
-          <button class="statsButton button navigationToolbarButtons" onclick = "navigateToPage('CraKuMaStats.html')"></button>
-     
+          <button class="statsButton button navigationToolbarButtons" onclick = "navigateToPage('stats.html')"></button>
+        </div>
       </div>
+    </div>
   </div>
-  <div class="navigationToolbar toolbarBasics"></div>
-
-</div>
-</div>
 
 </body>
 

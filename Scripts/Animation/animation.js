@@ -20,14 +20,12 @@ document.addEventListener('DOMContentLoaded', () => {
         for (let i = 0; i < frameCount; i++) {
             images.push(generateFrameImagePath(name, i));
         }
-        
         return images;
     }
 
     function addChildrenToParentDiv(parentDiv) {
         // Delete all children
         parentDiv.innerHTML = '';
-
         for (let i = 0; i < frameCount; i++) {
             const img = document.createElement('img');
             img.src = imagesPathArray[i];
@@ -36,7 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
             img.style.display = "none";
             parentDiv.appendChild(img);
         }
-
     }
 
     function loadAnimation(name) {
@@ -61,7 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
             index = (index + 1) % frameCount;
             changeVisibility(parentDiv.childNodes[index]);
         }, 1000 / frameRate);
-    
     }
 
     loadAnimation(avatarName);

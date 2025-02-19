@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const scaleY = viewportHeight / 1920;
 
       // Scaling test might remove the +0.005
-      const scale = Math.min(scaleX, scaleY)+0.005;
+      const scale = Math.min(scaleX, scaleY)+0.01;
   
       // Apply scaling
       container.style.transform = `scale(${scale})`;
