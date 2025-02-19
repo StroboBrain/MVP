@@ -65,9 +65,34 @@ html, body {
   background-color: rgb(0, 0, 0, 0.2);
 }
 
+/* Holds the avatars */
+
 .centerContentClass{
   height: 72%
 }
+
+
+
+.gridContainer{
+  height:100%;
+  width: 100%;
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 10%);
+  grid-template-rows: repeat(auto-fill, 10%);
+  gap: 0px 0px;
+}
+
+.avatar1{
+  grid-row-start: 2;
+  grid-column-start: 6;
+}
+
+.avatar{
+  margin: 1em;
+  height: 1em;
+}
+
 
 .displayCurrentLevel {
   font-family: 'Indie Flower', cursive; 
@@ -101,7 +126,7 @@ html, body {
 }
 
 
-
+/* Individual button styles */
 .achievedLevelButton{
   margin-top: 10px;
   margin-bottom: 10px;
@@ -109,7 +134,6 @@ html, body {
   font-size: 0.5em;
 }
 
-/* Individual button styles */
 .crakumaLandButton{
   font-weight: bold;
   width: 50%;
