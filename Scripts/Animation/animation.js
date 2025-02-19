@@ -2,9 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const defaultParentDiv = document.getElementById('avatarParent_1');
 
 
-    const frameRate = 1;
-    const defaultFrameCount = 4;
-    const avatarName = "Crakuma_01";
 
     // Return the path to the frame with the name
     function generateFrameImagePath(name, index) {
@@ -28,29 +25,26 @@ document.addEventListener('DOMContentLoaded', () => {
     function addChildrenToParentDiv(parentDiv, pathArray,frameCount) {
         // Delete all children
         parentDiv.innerHTML = '';
-        console.log(pathArray[0]);
+
         for (let i = 0; i < frameCount; i++) {
             const img = document.createElement('img');
             img.src = pathArray[i];
             img.className = "animationFrame";
             img.alt = "Frame " + i;
-            //img.style.display = "none";
+            img.style.display = "none";
             parentDiv.appendChild(img);
         }
+
 
     }
 
     function loadAnimation(name, parentName, frameCount) {
-
+        console.log(frameCount);
         var imagesPathArray = generateImagePathArray(name, frameCount);
-
         let tempParentDiv = document.getElementById(parentName);
         addChildrenToParentDiv(tempParentDiv,imagesPathArray,frameCount);
 
-        console.log(tempParentDiv.firstChild);
-        changeVisibility(tempParentDiv.firstChild);
-        console.log("Loaded animation");
-        playAnimation(tempParentDiv);
+        playAnimation(tempParentDiv,1);
     }
 
     function changeVisibility(object){
@@ -63,16 +57,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Cycles through the children of the parent
 
-    function playAnimation(parentDiv){
+    function playAnimation(parentDiv, framerate){
         let index = 0;
+        let arrayLength = parentDiv.childNodes.length;
         setInterval(() => {
             changeVisibility(parentDiv.childNodes[index]);
-            index = (index + 1) % frameCount;
+            index = (index + 1) % arrayLength;
             changeVisibility(parentDiv.childNodes[index]);
-        }, 1000 / frameRate);
-        console.log("Animation Played")
+        }, 1000 / framerate);
+
+        console.log("Animation Played");
     }
     
-    loadAnimation(avatarName,"avatarParent_1",4);
+    loadAnimation("Crakuma_01","avatarParent_1",4);
+
 });
 
