@@ -17,8 +17,9 @@ html, body {
 
 .screenRoot {
   margin: 0 auto; /* Center the container */
-  height: 100vh;
-  width: 100vw;
+  /* Was developped with 100vh, might needs adjustman */
+  height: 102vh;
+  width: 102vw;
   flex-direction: row;
   align-items: center;
 }
@@ -34,9 +35,8 @@ html, body {
   font-size: 70px;
 }
 
-.avatarBackground {
+.worldBackground {
   background-image: url("../AvatarResources/Import/world_01/World_sea.png"); /* Ensure path is correct */
-  background-size: contain; /* Scales down the image to fit within the container */
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents the image from repeating */
   height: 100%;
