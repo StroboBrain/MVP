@@ -32,21 +32,38 @@ document.addEventListener('DOMContentLoaded', () => {
             img.src = imagesPathArray[i];
             img.className = "animationFrame";
             img.alt = "Frame " + i;
-            img.display = "none";
+            img.style.display = "none";
             parentDiv.appendChild(img);
         }
+
     }
 
     function loadAnimation(name) {
         imagesPathArray = generateImagePathArray(name, frameCount);
         addChildrenToParentDiv();
+        changeVisibility(parentDiv.firstChild);
         console.log("Loaded animation");
     }
 
+    function changeVisibility(object){
+        if (object.style.display === "none") {
+            object.style.display = "block";
+        } else {
+            object.style.display = "none";
+        }
+    }
+
     function playAnimation(){
+        let index = 0;
+        setInterval(() => {
+            changeVisibility(parentDiv.childNodes[index]);
+            index = (index + 1) % frameCount;
+            changeVisibility(parentDiv.childNodes[index]);
+        }, 1000 / frameRate);
     
     }
 
     loadAnimation(avatarName);
+    playAnimation();
 });
 
