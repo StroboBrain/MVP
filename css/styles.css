@@ -7,6 +7,8 @@
   --Buttoncolor-red-color: #f77d80;
   --Buttoncolor-blue-color: #d4dfec;
   --Bordercolor-blei-color: #212121;
+  --Buttoncolor-grey-color: #D4DFEC;
+
 }
 
 html, body {
@@ -71,25 +73,6 @@ html, body {
   gap: 0px 0px;
 }
 
-.avatar1{
-  grid-row-start: 5;
-  grid-column-start: 7;
-}
-
-.avatar{
-  margin: 1em;
-  height: 1em;
-}
-
-
-.displayCurrentLevel {
-  font-family: 'Indie Flower', cursive; 
-  font-weight: bold;
-  font-size: 1em;
-}
-
-
-
 .button{
   height: 100%;
   border-radius: 20px;
@@ -99,17 +82,30 @@ html, body {
   border-color: var(--Bordercolor-blei-color);
 }
 
-/* Toolbars*/
-.headerToolbar{
-  grid-row: 1/6;
-  grid-column: 1/28;
-  height: 100%;
-  width: 100%;
-  background-color: rgb(0, 0, 0, 0.3);
+
+.avatar{
+  margin: 1em;
+  height: 1em;
 }
 
+.displayCurrentLevelButton {
+  grid-row: 8/11;
+  grid-column: 7/22;
+  font-family: 'Indie Flower', cursive; 
+  font-weight: bold;
+  font-size: 1em;
+  background-color: transparent;
+  border: none;
+}
+
+
+
+
+/* Toolbars*/
+
+
 .navigationToolbar {
-  grid-row: 1/6;
+  grid-row: 42/49;
   grid-column: 1/28;
   background-color: rgb(0, 0, 0,0.3);
   height: 100%;
@@ -123,20 +119,18 @@ html, body {
   display: center;
 }
 
-.levelDisplay{
-  font-size: 1em;
-  margin-right: 100px;
+
+
+
+
+/* Header */
+.headerToolbar{
+  grid-row: 1/7;
+  grid-column: 1/28;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(0, 0, 0, 0.3);
 }
-
-.navigationToolbarButton{
-  margin-bottom: 10px;
-  font-size: 0.3em;
-  border-width: 8px;
-}
-
-/* Individual button styles */
-
-
 
 .achievedLevelButton{
   margin-top: 10px;
@@ -144,34 +138,47 @@ html, body {
   font-size: 0.5em;
 }
 
-.crakumaLandButton{
+.headerTextButton{
+  font-size: 0.9em;
+  grid-row: 2/6;
+  grid-column: 7/22;
   font-weight: bold;
-  width: 50%;
   background-color: var(--Buttoncolor-red-color);
-  font-size: 0.7em;
-  border-width: 7px;
 }
 
-  .settingButton{
-  border-radius: 10px;
-  border-width: 5px;
-  background-image: url("../ImageResources/Buttons/SettingsButtonCropped.png");
-  background-size: contain; /* Scales down the image to fit within the container */
-  background-position: center; /* Centers the image */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
+.levelDisplay{
+  font-size: 0.9em;
+  grid-row: 2/6;
+  grid-column: 23/27;
+  background-color: var(--Buttoncolor-grey-color);
+
 }
 
 .helpButton{
-  height: 100px;
-  width: 110px;
-  margin-top: 10px;
+  grid-row: 2/6;
+  grid-column: 2/6;
   font-size: 1em;
+  background-color: var(--Buttoncolor-grey-color);
+
 }
 
+/* End of header */
 
-/* Navigation toolbar buttons*/
+
+
+
+
+/* Navigation toolbar */
+
+.navigationToolbarButton{
+  margin-bottom: 10px;
+  font-size: 0.3em;
+  border-width: 8px;
+}
+
 .worldButton{
-  height: 100%
+  grid-row: 43/48;
+  grid-column: 3/8;
   background-color: var(--Buttoncolor-red-color);
   background-image: url("../ImageResources/Buttons/WorldmapButtonCropped.png");
   background-position: center; 
@@ -179,17 +186,23 @@ html, body {
 }
 
 .statsButton{
+  grid-row: 43/48;
+  grid-column: 21/26;
   background-color: var(--Buttoncolor-red-color);
   background-image: url("../ImageResources/Buttons/StatsButtonCropped.png");
   background-size: contain;
 }
 
 .leftArrowButton{
+  grid-row: 43/48;
+  grid-column: 9/14;
   background-image: url("../ImageResources/Buttons/ArrowLeftButtonCropped.png");
   background-size: contain;
 }
 
 .rightArrowButton{
+  grid-row: 43/48;
+  grid-column: 15/20;
   background-image: url("../ImageResources/Buttons/ArrowRightButtonCropped.png");
   background-size: contain;
 }
@@ -202,3 +215,15 @@ html, body {
   position: center;
   width: 250px;
 }
+
+
+
+/* Not used Styles 
+
+  .settingButton{
+  background-image: url("../ImageResources/Buttons/SettingsButtonCropped.png");
+  background-size: contain; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+}
+*/
