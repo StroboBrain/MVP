@@ -4,7 +4,8 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-     
+    <linkhref="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Indie+Flower&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="css/styles.css">
     <title>CraKuMa</title>
     <!-- scripts -->
@@ -21,36 +22,34 @@
         <div class="avatarBackground">
           <div class="displayToolbar toolbarBasics">
             <!-- Left Button -->
-            <button>Lazer</button>
+            <button class="displayToolbarButton achievedLevelButton button">77/50</button>
             <!-- Text in the Middle -->
             <div class="crakumaLand">CRAKUMA-LAND</div>
-            <!-- Right Button -->
-            <button onclick="navigateToPage('CraKuMaAvatar.html')">Avatar</button>
+            <!-- Level Button  Disabled-->
+            <button class="displayToolbarButton levelDisplay button" onclick="navigateToPage('CraKuMaAvatar.html')">1</button>
           </div>
 
           <div class="settingToolbar toolbarBasics">
             <!-- setting button -->
             <button class="settingButton button"></button>
-            <!-- Text in the Middle -->
-            <div class="displayText">Text to display</div>
-            <!-- Right Button -->
-            <button class="helpButton" onclick="helpButton()">?</button>
+            <!-- Level Name -->
+            <div class="displayCurrentLevel">Mathemeer</div>
+            <!-- Help Button -->
+            <button class="helpButton button" onclick="helpButton()">?</button>
           </div>
           <div class="centerContent">
 
           </div>
           <div class="navigationToolbar toolbarBasics">
             <!-- Button 1-->
-            <button>World</button>
+            <button class="wordButton button navigationToolbarButton">World</button>
             <!-- Button 2-->
-            <button>Left</button>
+            <button class="leftArrowButton button navigationToolbarButton">Left</button>
             <!-- Button 3-->
-            <button>Right</button>
+            <button class="rightArrowButton button navigationToolbarButton">Right</button>
             <!-- Button 4-->
-            <button onclick = "navigateToPage('CraKuMaStats.html')">Stats</button>
+            <button class="statsButton button navigationToolbarButton" onclick = "navigateToPage('CraKuMaStats.html')">Stats</button>
           </div>
-
-
         </div>
         </div>
     </div>
