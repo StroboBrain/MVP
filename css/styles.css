@@ -24,7 +24,6 @@ body {
   /* Was developped with 100vh, might needs adjustman */
   height: 100vh;
   width: 100vw;
-
   align-items: center;
 }
 
@@ -33,7 +32,6 @@ body {
   height: 1920px;
   width: 1080px;
   transform-origin: top left; /* Ensure scaling starts from the top-left corner */
-  overflow: hidden;
   font-size: 70px;
 }
 
@@ -109,8 +107,6 @@ body {
   grid-column: 1/28;
   display: center;
 }
-
-
 
 
 
