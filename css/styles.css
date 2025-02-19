@@ -6,7 +6,6 @@
   --Buttoncolor-yellow-color: #fce5ae;
   --Buttoncolor-red-color: #f77d80;
   --Buttoncolor-blue-color: #d4dfec;
-
 }
 
 html, body {
@@ -14,7 +13,6 @@ html, body {
   margin: 0;
   padding: 0;
   overflow: hidden; /* Prevent scrolling */
-
 }
 
 .screenRoot {
@@ -43,7 +41,6 @@ html, body {
   background-repeat: no-repeat; /* Prevents the image from repeating */
   height: 100%;
   font-size: 1em;
-
 }
 
 .toolbarBasics {
@@ -52,13 +49,11 @@ html, body {
   align-items: center;
   height: 8%;
   font-size: 1em;
-
 }
 
 .navigationToolbar {
   background-color: rgb(0, 0, 0,0.3);
   height: 12%;
-
 }
 
 .displayToolbar {
@@ -112,13 +107,13 @@ html, body {
 .levelDisplay:hover {
   background-color: var(--Buttoncolor-yellow-color);
 }
+
 .achievedLevelButton{
   margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 100px;
   font-size: 0.5em;
 }
-
 
 /* Individual button styles */
   .settingButton{
