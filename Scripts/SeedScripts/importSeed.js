@@ -20,7 +20,6 @@ function checkSeed(seed) {
     
     console.log(seed + "is not a valid seed");
     return false;
-    
 }
 
 
@@ -43,6 +42,17 @@ function extractQueryString() {
 function saveSeed(seedToSave){
     seed = seedToSave;
     localStorage.setItem("sessionSeed", seed);
+    let levelTemp = getLevel();
+    saveLevel(levelTemmp);
+}
+
+//TODO 
+function getLevel(){
+    return 1;
+}
+
+function saveLevel(level){
+    localStorage.setItem("level",level);
 }
 
 function loadSeed(){

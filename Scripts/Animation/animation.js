@@ -1,46 +1,56 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const defaultParentDiv = document.getElementById('centerContent');
-    if (!defaultParentDiv) {
-        console.error('Parent div not found');
-        return;
-    }
+    const defaultParentDiv = document.getElementById('avatarParent_1');
+
 
     const frameRate = 1;
-    const frameCount = 4;
+    const defaultFrameCount = 4;
     const avatarName = "Crakuma_01";
-    let imagesPathArray;
+
     // Return the path to the frame with the name
     function generateFrameImagePath(name, index) {
-        console.log("/ImageResources/Crakumas/" + name + "/frame_" + index + ".png");
-        return "/ImageResources/Crakumas/" + name + "/frame_" + index + ".png";
+        console.log("../ImageResources/Crakumas/" + name + "/frame_" + index + ".png");
+        return "../ImageResources/Crakumas/" + name + "/frame_" + index + ".png";
     }
+
 
     function generateImagePathArray(name, frameCount) {
-        const images = [];
+        const imagesArray = [];
         for (let i = 0; i < frameCount; i++) {
-            images.push(generateFrameImagePath(name, i));
+            imagesArray.push(generateFrameImagePath(name, i));
         }
-        return images;
+        if (imagesArray.length !== frameCount) {
+            console.error("Mismatch between imagesArray length and frameCount:", imagesArray, frameCount);
+        }
+        return imagesArray;
     }
 
-    function addChildrenToParentDiv(parentDiv) {
+
+    function addChildrenToParentDiv(parentDiv, pathArray,frameCount) {
         // Delete all children
         parentDiv.innerHTML = '';
+        console.log(pathArray[0]);
         for (let i = 0; i < frameCount; i++) {
             const img = document.createElement('img');
-            img.src = imagesPathArray[i];
+            img.src = pathArray[i];
             img.className = "animationFrame";
             img.alt = "Frame " + i;
-            img.style.display = "none";
+            //img.style.display = "none";
             parentDiv.appendChild(img);
         }
+
     }
 
-    function loadAnimation(name) {
-        imagesPathArray = generateImagePathArray(name, frameCount);
-        addChildrenToParentDiv(defaultParentDiv);
-        changeVisibility(defaultParentDiv.firstChild);
+    function loadAnimation(name, parentName, frameCount) {
+
+        var imagesPathArray = generateImagePathArray(name, frameCount);
+
+        let tempParentDiv = document.getElementById(parentName);
+        addChildrenToParentDiv(tempParentDiv,imagesPathArray,frameCount);
+
+        console.log(tempParentDiv.firstChild);
+        changeVisibility(tempParentDiv.firstChild);
         console.log("Loaded animation");
+        playAnimation(tempParentDiv);
     }
 
     function changeVisibility(object){
@@ -51,6 +61,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Cycles through the children of the parent
+
     function playAnimation(parentDiv){
         let index = 0;
         setInterval(() => {
@@ -58,9 +70,9 @@ document.addEventListener('DOMContentLoaded', () => {
             index = (index + 1) % frameCount;
             changeVisibility(parentDiv.childNodes[index]);
         }, 1000 / frameRate);
+        console.log("Animation Played")
     }
-
-    loadAnimation(avatarName);
-    playAnimation(defaultParentDiv);
+    
+    loadAnimation(avatarName,"avatarParent_1",4);
 });
 

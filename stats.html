@@ -3,16 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <!-- TODO add best meta scripts -->
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
     <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Indie+Flower&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="css/styles.css">
-    <title>Home</title>
+    <title>Stats</title>
     <!-- scripts -->
-    <script src="Scripts/buttons.js"></script>
     <script src="Scripts/SeedScripts/importSeed.js"></script>
+    <script src="Scripts/buttons.js"></script>
     <script src="Scripts/scaling.js"></script>
     <script src="Scripts/Animation/animation.js"></script>
 </head>
@@ -27,21 +24,20 @@
           <div class="headerToolbar toolbarBasics"></div>
           <button class="helpButton headerToolbarButton button" onclick="helpButton()"></button>
           <button class="headerTextButton headerToolbarButton button">CRAKUMA-LAND</button>
-          <button class= "headerToolbarButton levelDisplayButton button"></button>
+          <button class= "headerToolbarButton levelDisplay button"></button>
           <!-- Seconde Row-->
-          <button class="displayCurrentLevelButton"><b>Mathemeer</b></button>
-          <!-- Avatars -->
-          <div class="avatar" id="avatarParent_1">never</div>
+          <button class="displayCurrentLevelButton"><b>Dein Wissensstand</b></button>
           <!-- Navigation Toolbar -->
           <div class="navigationToolbar toolbarBasics"></div>
-          <button class="worldButton button navigationToolbarButtons" onclick="navigateToPage('map.html')"></button>
-          <button class="leftArrowButton button navigationToolbarButtons" onclick = "navigateToPage('map.html')"></button>
-          <button class="rightArrowButton button navigationToolbarButtons" onclick = "navigateToPage('regionA.html')"></button>
+          <button class="worldButton button navigationToolbarButtons"></button>
+          <button class="leftArrowButton button navigationToolbarButtons"></button>
+          <button class="rightArrowButton button navigationToolbarButtons"></button>
           <button class="statsButton button navigationToolbarButtons" onclick = "navigateToPage('stats.html')"></button>
         </div>
       </div>
     </div>
   </div>
+
 
 </body>
 </html>
