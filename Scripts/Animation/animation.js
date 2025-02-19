@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const parentDiv = document.getElementById('centerContent');
-    if (!parentDiv) {
+    const defaultParentDiv = document.getElementById('centerContent');
+    if (!defaultParentDiv) {
         console.error('Parent div not found');
         return;
     }
@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const frameCount = 4;
     const avatarName = "Crakuma_01";
     let imagesPathArray;
-
     // Return the path to the frame with the name
     function generateFrameImagePath(name, index) {
         console.log("/ImageResources/Crakumas/" + name + "/frame_" + index + ".png");
@@ -25,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return images;
     }
 
-    function addChildrenToParentDiv() {
+    function addChildrenToParentDiv(parentDiv) {
         // Delete all children
         parentDiv.innerHTML = '';
 
@@ -42,8 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function loadAnimation(name) {
         imagesPathArray = generateImagePathArray(name, frameCount);
-        addChildrenToParentDiv();
-        changeVisibility(parentDiv.firstChild);
+        addChildrenToParentDiv(defaultParentDiv);
+        changeVisibility(defaultParentDiv.firstChild);
         console.log("Loaded animation");
     }
 
@@ -55,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function playAnimation(){
+    function playAnimation(parentDiv){
         let index = 0;
         setInterval(() => {
             changeVisibility(parentDiv.childNodes[index]);
@@ -66,6 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     loadAnimation(avatarName);
-    playAnimation();
+    playAnimation(defaultParentDiv);
 });
 

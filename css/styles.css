@@ -81,11 +81,13 @@ html, body {
   grid-template-columns: repeat(auto-fill, 10%);
   grid-template-rows: repeat(auto-fill, 10%);
   gap: 0px 0px;
+  border-style: solid;
+  border-color: black;
 }
 
 .avatar1{
-  grid-row-start: 2;
-  grid-column-start: 6;
+  grid-row-start: 5;
+  grid-column-start: 7;
 }
 
 .avatar{
