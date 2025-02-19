@@ -1,12 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Index Page</title>
+
+    <meta charset="UTF-8">
+    <!-- TODO add best meta scripts -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Indie+Flower&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Home</title>
+    <!-- scripts -->
+    <script src="Scripts/buttons.js"></script>
+    <script src="Scripts/SeedScripts/importSeed.js"></script>
+    <script src="Scripts/scaling.js"></script>
 </head>
+
 <body>
-  
-<a href="CraKuMaHome.html">Mobile Version</a>
+    <div class="screenRoot">
+      <div class="appRoot">
+        <!-- Div contains content-->
+        <div class="worldBackground">
+          <div class="gridContainer">
+           <div class="headerToolbar toolbarBasics">
+            <!-- Help Button -->
+            <button class="headerToolbarButton helpButton button" onclick="helpButton()">?</button>
+            <!-- Text in the Middle -->
+            <button class="crakumaLandButton button headerToolbarButton">CRAKUMA-LAND</button>
+            <!-- Level Button  Disabled-->
+            <button class="headerToolbarButton levelDisplay button">1</button>
+          </div>
+
+          <div class="titelToolbar toolbarBasics">
+            <div class="displayCurrentLevel"><b>Mathemeer</b></div>
+          </div>
+          <div class="navigationToolbar toolbarBasics">
+            <!-- Button 1-->
+            <button class="worldButton button navigationToolbarButton"></button>
+            <!-- Button 2-->
+            <button class="leftArrowButton button navigationToolbarButton"></button>
+            <!-- Button 3-->
+            <button class="rightArrowButton button navigationToolbarButton"></button>
+            <!-- Button 4-->
+            <button class="statsButton button navigationToolbarButton" onclick = "navigateToPage('CraKuMaStats.html')"></button>
+          </div>
+
+        
+      </div>
+  </div>
+</div>
+</div>
+
 </body>
+
 </html>

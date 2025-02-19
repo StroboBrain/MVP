@@ -6,6 +6,7 @@
   --Buttoncolor-yellow-color: #fce5ae;
   --Buttoncolor-red-color: #f77d80;
   --Buttoncolor-blue-color: #d4dfec;
+  --Bordercolor-blei-color: #212121;
 }
 
 html, body {
@@ -52,19 +53,6 @@ html, body {
   font-size: 1em;
 }
 
-.navigationToolbar {
-  background-color: rgb(0, 0, 0,0.3);
-  height: 12%;
-}
-
-.displayToolbar {
-  background-color: rgb(0, 0, 0, 0.3);
-}
-
-.settingToolbar {
-  background-color: rgb(0, 0, 0, 0.2);
-}
-
 /* Holds the avatars */
 
 .centerContentClass{
@@ -78,11 +66,9 @@ html, body {
   width: 100%;
   align-items: center;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 10%);
-  grid-template-rows: repeat(auto-fill, 10%);
+  grid-template-columns: repeat(auto-fill, 40px);
+  grid-template-rows: repeat(auto-fill, 40px);
   gap: 0px 0px;
-  border-style: solid;
-  border-color: black;
 }
 
 .avatar1{
@@ -110,29 +96,51 @@ html, body {
   border-radius: 10px;
   border-width: 5px;
   border-style: solid;
-  border-color: black;
+  border-color: var(--Bordercolor-blei-color);
 }
 
-.displayToolbarButton{
-  margin-top: 10px;
-  margin-bottom: 10px;
-  height: 100px;
-  width: 110px;
-  background-color: var(--Buttoncolor-yellow-color);
+/* Toolbars*/
+.headerToolbar{
+  grid-row: 1/6;
+  grid-column: 1/28;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(0, 0, 0, 0.3);
 }
 
+.navigationToolbar {
+  grid-row: 1/6;
+  grid-column: 1/28;
+  background-color: rgb(0, 0, 0,0.3);
+  height: 100%;
+  width: 100%;
+}
+
+
+.titelToolbar {
+  grid-row: 7/11;
+  grid-column: 1/28;
+  display: center;
+}
 
 .levelDisplay{
   font-size: 1em;
   margin-right: 100px;
 }
 
+.navigationToolbarButton{
+  margin-bottom: 10px;
+  font-size: 0.3em;
+  border-width: 8px;
+}
 
 /* Individual button styles */
+
+
+
 .achievedLevelButton{
   margin-top: 10px;
   margin-bottom: 10px;
-  margin-left: 100px;
   font-size: 0.5em;
 }
 
@@ -144,17 +152,9 @@ html, body {
   border-width: 7px;
 }
 
-
   .settingButton{
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 100px;
-  height: 100px;
-  width: 110px;
   border-radius: 10px;
   border-width: 5px;
-  border-style: solid;
-  border-color: black;
   background-image: url("../ImageResources/Buttons/SettingsButtonCropped.png");
   background-size: contain; /* Scales down the image to fit within the container */
   background-position: center; /* Centers the image */
@@ -165,23 +165,13 @@ html, body {
   height: 100px;
   width: 110px;
   margin-top: 10px;
-  margin-bottom: 10px;
-  margin-right: 100px;
   font-size: 1em;
 }
 
-.navigationToolbarButton{
-  height: 140px;
-  width: 160px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-size: 0.3em;
-  border-width: 8px;
-}
 
+/* Navigation toolbar buttons*/
 .worldButton{
-  margin-left: 120px;
-  font-size: 0.3em;
+  height: 100%
   background-color: var(--Buttoncolor-red-color);
   background-image: url("../ImageResources/Buttons/WorldmapButtonCropped.png");
   background-position: center; 
@@ -189,8 +179,6 @@ html, body {
 }
 
 .statsButton{
-  margin-right: 120px;
-  font-size: 0.3em;
   background-color: var(--Buttoncolor-red-color);
   background-image: url("../ImageResources/Buttons/StatsButtonCropped.png");
   background-size: contain;
@@ -209,11 +197,8 @@ html, body {
 
 /* Animation styles*/
 
-
 .animationFrame {
   position: absolute; /* Children positioned absolute to stack */
   position: center;
-
   width: 250px;
-  
 }
