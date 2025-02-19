@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
-    const frameRate = 2;
+    const frameRate = 1;
     const frameCount = 4;
     const avatarName = "Crakuma_01";
     let imagesPathArray;

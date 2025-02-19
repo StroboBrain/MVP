@@ -162,5 +162,8 @@ html, body {
 
 .animationFrame {
   position: absolute; /* Children positioned absolute to stack */
-  padding-top: 15%;
+  position: center;
+
+  width: 250px;
+  
 }
