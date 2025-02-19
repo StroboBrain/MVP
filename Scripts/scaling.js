@@ -7,7 +7,8 @@ document.addEventListener('DOMContentLoaded', function () {
       
       const scaleX = viewportWidth / 1080;
       const scaleY = viewportHeight / 1920;
-      const scale = Math.min(scaleX, scaleY);
+      // Scaling test
+      const scale = Math.min(scaleX, scaleY)+0.005;
   
       // Apply scaling
       container.style.transform = `scale(${scale})`;

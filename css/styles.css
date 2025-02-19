@@ -23,8 +23,8 @@ html, body {
 .screenRoot {
   margin: 0 auto; /* Center the container */
   /* Was developped with 100vh, might needs adjustman */
-  height: 105vh;
-  width: 105vw;
+  height: 110vh;
+  width: 110vw;
   flex-direction: row;
   align-items: center;
 }
