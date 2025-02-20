@@ -1,12 +1,12 @@
 window.addEventListener("load", () => {
 
     const maxFrames = 20;
-    let parentArray = document.querySelectorAll(".avatar");
+    var parentArray = document.querySelectorAll(".avatar");
     const debug = true;
-    let debugLevel = 7;
-    let level = 0;
-    let currentPageName = getPageName();
-    let frameRate = 2.3;
+    var debugLevel = 7;
+    var level = 0;
+    var currentPageName = getPageName();
+    var frameRate = 2.3;
 
     loadLevel();
 
