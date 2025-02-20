@@ -20,7 +20,7 @@ function turnVisibilityOff(name){
 }
 
 // Loads the level from local storage into the level buttton
-function loadLevel() {
+function loadButtonLevel() {
     // Retrieve the level from local storage
     let level = localStorage.getItem("level");
   
@@ -39,9 +39,8 @@ function loadLevel() {
     }
 }
 
-
 window.onload = function (){
-    loadLevel();
+    loadButtonLevel();
     let helpText = document.querySelector(".helpText");
     helpText.textContent = "Helptext is coming to a cinema near you soon";
     let toolbarText = document.querySelector(".headerTextButton");

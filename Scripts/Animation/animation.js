@@ -1,8 +1,12 @@
 var maxFrames = 20;
 var debug = true;
 var debugLevel = 7;
-var level = 0;
+let level = 0;
 var frameRate = 2.3;
+
+// Defined on load
+var animationParentsArray;
+var currentPageName;
 
 // Return the path to the frame with the name
 function generateFrameImagePath(folderName, name, index) {
@@ -20,10 +24,11 @@ function generateImagePathArray(folderName, name) {
 }
 
 function loadLevel(currentPageName){
-    level = localStorage.getItem(currentPageName) || 0;
+    let tempLevel = localStorage.getItem(currentPageName) || 0;
     // Option to debug
-    if (debugLevel) level = debugLevel;
-    if (debug) console.log("Current level set at " + level); 
+    if (debugLevel) tempLevel = debugLevel;
+    if (debug) console.log("Current level set at " + level);
+    return tempLevel;
 }
 
 
@@ -123,7 +128,6 @@ function getPageName(){
     let fullPath = window.location.pathname;
     let pageName = fullPath.substring(fullPath.lastIndexOf('/') + 1);
     pageName = pageName.split(".")[0];
-
     if (debug) console.log("Current page :" + pageName);
     return pageName;
 }
@@ -134,21 +138,25 @@ function loadAvatars(currentPageName){
     let avatar = "avatar_" + i;
     let avatarParentName = "avatarParent_"+i;
     loadAnimation(currentPageName,avatar, avatarParentName);
+    }
 }
-}
 
-document.addEventListener("DOMContentLoaded", () => {
-    var currentPageName = getPageName();
-    loadLevel(currentPageName);
-    loadAvatars(currentPageName);
-});
-
-
-window.addEventListener('load', () => {
+function startAnimations(){
     for (let i = 1; i <level+1; i++) {
         let avatar = "avatar_" + i;
         let avatarParentName = "avatarParent_"+i;
         playAnimationWithId(avatarParentName, frameRate);
     }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    animationParentsArray = document.getElementsByClassName('avatar');
+    if (debug) console.log(animationParentsArray);
+    currentPageName = getPageName();
+    level = loadLevel(currentPageName);
+    loadAvatars(currentPageName);
 });
 
+window.addEventListener('load', () => {
+    startAnimations();
+});
