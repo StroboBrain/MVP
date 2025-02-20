@@ -70,17 +70,23 @@ function addChildrenToParentDiv(parentDiv, pathArray) {
 }
 
 function changeVisibility(object){
-    if (object.style.display === "none") {
+    //Only change if it is visible
+    try{
+        if (object.style.display === "none") {
         object.style.display = "block";
     } else {
         object.style.display = "none";
+    }
+
+    }
+    catch (error) {
+        console.error("An error occurred while toggling display:", error);
     }
 }
 
 
 function isVisibil(object){
     if (!object) return false;
-
     return object.style.display =="block";
 }
 
