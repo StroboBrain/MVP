@@ -15,8 +15,8 @@ function helpButton(){
 }
 
 function turnVisibilityOff(name){
-    let temp = document.querySelector(name);
-    temp.style.display = "none";
+    let tempToTurnOff = document.querySelector(name);
+    tempToTurnOff.style.display = "none";
 }
 
 // Loads the level from local storage into the level buttton
@@ -26,11 +26,11 @@ function loadButtonLevel() {
     // Log the level to the console
     console.log("Level:", buttonLevel, "loaded");
     // Find the button element
-    let button = document.querySelector('.levelDisplayButton');
+    let buttonElement = document.querySelector('.levelDisplayButton');
     // Check if the button exists
-    if (button) {
+    if (buttonElement) {
       // Update the button's text content
-      button.textContent = buttonLevel || "0"; // Use "0" if level is null/undefined
+      buttonElement.textContent = buttonLevel || "0"; // Use "0" if level is null/undefined
     } else {
       console.error("Button with class 'levelDisplayButton' not found.");
     }
@@ -38,8 +38,8 @@ function loadButtonLevel() {
 
 window.onload = function (){
     loadButtonLevel();
-    let helpText = document.querySelector(".helpText");
-    helpText.textContent = "Helptext is coming to a cinema near you soon";
+    let helpTextToChange = document.querySelector(".helpText");
+    helpTextToChange.textContent = "Helptext is coming to a cinema near you soon";
     let toolbarText = document.querySelector(".headerTextButton");
     toolbarText.textContent = "CRACKUMA-LAND";
 };
