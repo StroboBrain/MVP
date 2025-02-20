@@ -14,7 +14,7 @@ var seed = "No seed-string loaded";
 
 function checkSeed(seed) {
     // TODO decide on the length/structur of the seed currently 3 chars
-    if (seed.length==20) {
+    if (seed.length==21) {
         return true;
     }
     
@@ -38,8 +38,8 @@ function extractQueryString() {
     var queryString = currentUrl.split("?")[1];
 
     if (queryString == undefined) {
-        console.log("No query string found, default seed loaded: 000");
-        return "000";
+        console.log("No query string found, default seed loaded: 000..");
+        return "000000000000000000000";
     }
 
     // Extracts the seed, only works if there is only one query parameter
@@ -50,6 +50,8 @@ function saveSeed(seedToSave){
     seed = seedToSave;
     localStorage.setItem("sessionSeed", seed);
     saveLevel(seed);
+    saveStats(seed);
+    saveWorlds(seed);
 }
 
 
@@ -62,9 +64,30 @@ function saveLevel(seedToCheck){
 }
 
 function saveStats(seedToCheck){
-    localStorage.setItem("level",seedToCheck.substring());
+    var temp = getIntegerValue(seedToCheck.substring(2,3));
+    localStorage.setItem("Grundlagen",temp);
+    temp = getIntegerValue(seedToCheck.substring(3,4));
+    localStorage.setItem("Funktionen",temp);
+    temp = getIntegerValue(seedToCheck.substring(4,5));
+    localStorage.setItem("Geometrie",temp);
+    temp = getIntegerValue(seedToCheck.substring(5,6));
+    console.log(temp+"Zufallerino");
+    localStorage.setItem("Zufall",temp);
+    temp = getIntegerValue(seedToCheck.substring(6,7));
+    localStorage.setItem("Prüfung",temp);
 
+}
 
+function saveWorlds(seedToCheck){
+    var amount;
+    var index = 8;
+    for (let i = 0; i < 7; i++) {
+        // Get the character code for 'A' (65) and add the loop index
+        let char = String.fromCharCode(65 + i);
+        amount = getIntegerValue(seedToCheck.substring(index,index+1));
+        localStorage.setItem("Regoion" + char, amount);
+        index+=2;
+    }
 }
 
 function loadSeed(){
@@ -107,6 +130,7 @@ function getIntegerValue(stringInput){
         if (char.length!==1){
             console.error("Input must be single char");
         }
+
         return charMap[char] || char;
     }
 
