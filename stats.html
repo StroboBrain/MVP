@@ -9,16 +9,17 @@
     
     <!-- styles -->
 
-    <link rel="stylesheet" href="css/AvatarStyles/avatarDefault.css">
+    <link rel="stylesheet" href="css/avatarDefault.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/SiteStyles/stats.css">
+
 
     <title>Statistik</title>
-
     <!-- scripts -->
     <script src="Scripts/buttons.js"></script>
+    <script src="Scripts/SeedScripts/importSeed.js"></script>
     <script src="Scripts/scaling.js"></script>
     <script src="Scripts/Animation/animation.js"></script>
-
 </head>
 
 <body>
@@ -30,26 +31,25 @@
           <!-- Header Toolbar-->
           <div class="headerToolbar toolbarBasics"></div>
           <button class="helpButton headerToolbarButton button" onclick="helpButton()"></button>
-          <button class="headerTextButton headerToolbarButton button">CRAKUMA-LAND</button>
+          <button class="headerTextButton headerToolbarButton button"></button>
           <button class= "headerToolbarButton levelDisplayButton button"></button>
           <!-- Seconde Row-->
-          <button class="displayCurrentLevelButton"><b></b></button>
-          <!-- 7 Avatars -->
-          <div class="avatar" id="avatarParent_1"></div>
-          <div class="avatar" id="avatarParent_2"></div>
-          <div class="avatar" id="avatarParent_3"></div>
-          <div class="avatar" id="avatarParent_4"></div>
-          <div class="avatar" id="avatarParent_5"></div>
-          <div class="avatar" id="avatarParent_6"></div>
-          <div class="avatar" id="avatarParent_7"></div>
-          <div class="helpText" onclick="turnVisibilityOff('.helpText')">Helptext</div>
+          <button class="displayCurrentLevelButton"><b>Dein Wissensstand</b></button>
+          <!-- Display containers Avatars -->
+          <div class= "fachDescriptionBox gebietTextboxen statsPageDefault">Fach</div>
+          <div class= "scaleScale wertungsBox statsPageDefault">6  5  4  3  2  1  ★</div>
+          <div class= "grundlagenDescriptionBox gebietTextboxen statsPageDefault">Grundlagen</div>
+          <div class= "grundlagenScale wertungsBoxen statsPageDefault"></div>
+
+
+          <div class="helpText" onclick="turnVisibilityOff('.helpText')"></div>
 
           <!-- Navigation Toolbar -->
           <div class="navigationToolbar toolbarBasics"></div>
           <button class="worldButton button navigationToolbarButtons" onclick="navigateToPage('map.html')"></button>
-          <button class="leftArrowButton button navigationToolbarButtons" onclick = "navigateToPage('regionG.html')"></button>
-          <button class="rightArrowButton button navigationToolbarButtons" onclick = "navigateToPage('map.html')"></button>
-          <button class="homeButton button navigationToolbarButtons" onclick = "navigateToPage('index.html')"></button>
+          <button class="leftArrowButton button navigationToolbarButtons" onclick = "navigateToPage('map.html')"></button>
+          <button class="rightArrowButton button navigationToolbarButtons" onclick = "navigateToPage('regionA.html')"></button>
+          <button class="homeButton button navigationToolbarButtons" onclick = "navigateToPage('stats.html')"></button>
         </div>
       </div>
     </div>

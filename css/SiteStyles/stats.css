@@ -1,0 +1,33 @@
+
+.statsPageDefault{
+    border-color: #212121;
+    border-radius: 20px;
+    border-width: 8px;
+    border-style: solid;
+}
+
+.fachDescriptionBox{
+    grid-row:12/14;
+    grid-column: 3/10;
+    background-color: #D4DFEC;
+}
+
+.scaleScale{
+    grid-row:12/14;
+    grid-column: 12/25;
+    background-color: #D4DFEC;
+}
+
+.grundlagenDescriptionBox{
+    grid-row:17/19;
+    grid-column: 3/10;
+}
+
+.grundlagenScale{
+    grid-row:17/19;
+    grid-column: 12/25;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    
+}

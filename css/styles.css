@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-  
 }
 
 :root{
@@ -79,7 +78,7 @@ body {
 
 .displayCurrentLevelButton {
   grid-row: 8/11;
-  grid-column: 7/22;
+  grid-column: 3/25;
   font-family: 'Indie Flower', cursive; 
   font-weight: bold;
   font-size: 1.3em;
@@ -215,6 +214,10 @@ body {
   background-color: var(--Buttoncolor-red-color);
   background-image: url("../ImageResources/Buttons/HomeButtonCropped.png");
 }
+
+/* Stats Buttons */
+
+
 
 
 
