@@ -15,6 +15,8 @@ The seed is loaded via parameters in the url and stored in the local storage.
 ## Animations
 Plane javascript to cycle through the frames.
 
+## Prototype
+This page is considered a prototype and not fully functional/optimised.
 
 # License
 All rights reserved. 
