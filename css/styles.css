@@ -17,6 +17,7 @@ body {
   padding: 0;
   overflow: hidden;
   align-items: center;
+  color: var(--Bordercolor-blei-color);
 }
 
 .screenRoot {
@@ -203,6 +204,13 @@ body {
   grid-row: 43/48;
   grid-column: 15/20;
   background-image: url("../ImageResources/Buttons/ArrowRightButtonCropped.png");
+}
+
+.homeButton{
+  grid-row: 43/48;
+  grid-column: 21/26;
+  background-color: var(--Buttoncolor-red-color);
+  background-image: url("");
 }
 
 

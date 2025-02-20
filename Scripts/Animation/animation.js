@@ -36,8 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
             img.style.display = "none";
             parentDiv.appendChild(img);
         }
-
-
     }
 
     function loadAnimation(name, parentName, frameCount) {
