@@ -38,8 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // Cleanup frameCount not needed anymore
         
 
-
-
         // Delete all children
         parentDiv.innerHTML = '';
 
@@ -55,7 +53,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             // add class for css
 
-            img.className = "animationFrame";
+            let className = "animationFrame " + parentDiv.id;
+
+            img.className = className;
             img.alt = "Frame " + i;
             img.style.display = "none";
             parentDiv.appendChild(img);
