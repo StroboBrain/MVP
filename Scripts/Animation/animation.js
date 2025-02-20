@@ -3,6 +3,7 @@ var debug = true;
 var debugLevel = 7;
 let level = 0;
 var frameRate = 2.3;
+let reload = false;
 
 // Defined on load
 var animationParentsArray;
@@ -159,4 +160,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 window.addEventListener('load', () => {
     startAnimations();
+    if (localStorage.getItem("reload")==="false"){
+        localStorage.setItem("reload","true");
+        location.reload();
+
+
+    }
+    
 });
