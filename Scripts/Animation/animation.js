@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Return the path to the frame with the name
     function generateFrameImagePath(name, index) {
-        let path = "../../ImageResources/Crakumas/" + name + "/frame_" + index + ".png";
+        let path = "ImageResources/Crakumas/" + name + "/frame_" + index + ".png";
         console.log(path);
         return path;
     }
