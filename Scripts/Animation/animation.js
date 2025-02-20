@@ -14,15 +14,14 @@ window.addEventListener("load", () => {
         level = localStorage.getItem(currentPageName) || 0;
         // Option to debug
         if (debugLevel) level = debugLevel;
-        if (debug) console.log("Level set a " + level); 
+        if (debug) console.log("Current level set at " + level); 
     }
 
 
     function loadAvatar(numberOfAvatars){
         if (numberOfAvatars>7) console.warn("more then 7 avatars requested");
         for (let i = 0; i < numberOfAvatars+1; i++) {
-            console.log("eotk" + i); // Access each element
-            // Perform actions on each element, e.g., parentArray[i].style.backgroundColor = "red";
+           
         }
     }
 
@@ -103,14 +102,17 @@ window.addEventListener("load", () => {
 
     function playAnimation(parentDiv, framerate){
         let index = 0;
-        let arrayLength = parentDiv.childNodes.length;
+        var arrayLength = parentDiv.childNodes.length;
 
 
         setInterval(() => {
+            console.log("blaso");
+
             let nextIndex = (index + 1) % arrayLength;
             if (isVisibil(parentDiv.childNodes[index])){
                 changeVisibility(parentDiv.childNodes[index]);
             }
+
             changeVisibility(parentDiv.childNodes[nextIndex]);
             index = nextIndex;
         }, 1000 / framerate);
@@ -136,15 +138,13 @@ window.addEventListener("load", () => {
 
     // Starts the animations TODO improve
 
-    
-
+    console.log("wasuo");
     for (let i = 1; i <level+1; i++) {
         let avatar = "avatar_" + i;
         let avatarParentName = "avatarParent_"+i;
         loadAnimation(currentPageName ,avatar, avatarParentName);
 
     }
-
     for (let i = 1; i <level+1; i++) {
         let avatar = "avatar_" + i;
         let avatarParentName = "avatarParent_"+i;
