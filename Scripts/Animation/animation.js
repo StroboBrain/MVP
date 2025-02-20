@@ -162,6 +162,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 window.addEventListener('load', () => {
     //Increase time for loading content
-    setTimeout(startAnimations, 101);
+    setTimeout(startAnimations, 1001);
 
 });
