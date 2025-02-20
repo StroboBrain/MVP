@@ -106,8 +106,9 @@ window.addEventListener("load", () => {
 
 
         setInterval(() => {
-            console.log("blaso");
-
+            if (!parentDiv.firstChild){
+                loadAvatars();
+            }
             let nextIndex = (index + 1) % arrayLength;
             if (isVisibil(parentDiv.childNodes[index])){
                 changeVisibility(parentDiv.childNodes[index]);
@@ -138,20 +139,22 @@ window.addEventListener("load", () => {
 
     // Starts the animations TODO improve
 
-    console.log("wasuo");
-    for (let i = 1; i <level+1; i++) {
+    function loadAvatars(){
+        for (let i = 1; i <level+1; i++) {
         let avatar = "avatar_" + i;
         let avatarParentName = "avatarParent_"+i;
         loadAnimation(currentPageName ,avatar, avatarParentName);
-
     }
+}
+    loadAvatars();
+
+    
+    console.log("run");
     for (let i = 1; i <level+1; i++) {
         let avatar = "avatar_" + i;
         let avatarParentName = "avatarParent_"+i;
         playAnimationWithId(avatarParentName, frameRate);
     }
-
-    
 
 
 
