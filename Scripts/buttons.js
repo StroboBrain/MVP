@@ -33,7 +33,7 @@ function loadLevel() {
     // Check if the button exists
     if (button) {
       // Update the button's text content
-      button.textContent = level || "N/A"; // Use "N/A" if level is null/undefined
+      button.textContent = level || "0"; // Use "0" if level is null/undefined
     } else {
       console.error("Button with class 'levelDisplayButton' not found.");
     }

@@ -85,6 +85,8 @@ document.addEventListener('DOMContentLoaded', () => {
     loadAnimation("index","avatar_1", "avatarParent_1",4);
     playAnimationWithId("avatarParent_1",1);
 
+    // Animation
+
 });
 
 

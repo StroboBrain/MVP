@@ -18,5 +18,15 @@ Plane javascript to cycle through the frames.
 ## Prototype
 This page is considered a prototype and not fully functional/optimised.
 
+## Hardcoding
+Following areas are hardcoded 
+
+- Buttonlinks
+- Stylesheets
+- Avatarloading
+- Header Text
+- displayCurrentLevel
+
+
 # License
 All rights reserved. 
