@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const maxFrames = 20;
     const defaultParentDiv = document.getElementById('avatarParent_1');
 
+    let debug = false;
+
 
 
     // Return the path to the frame with the name
@@ -21,6 +23,16 @@ document.addEventListener('DOMContentLoaded', () => {
         return imagesArray;
     }
 
+    async function checkFileExists(url) {
+        try {
+            const response = await fetch(url, { method: 'HEAD' });
+            return response.ok; // Returns true if status code is 200-299
+        } catch (error) {
+            console.error("Error checking file:", error);
+            return false; // Returns false if there's an error (e.g., network issue)
+        }
+    }
+
 
     function addChildrenToParentDiv(parentDiv, pathArray,frameCount) {
         // Cleanup frameCount not needed anymore
@@ -32,13 +44,17 @@ document.addEventListener('DOMContentLoaded', () => {
         parentDiv.innerHTML = '';
 
         for (let i = 0; i < maxFrames; i++) {
+            let tempPath = pathArray[i];
             const img = document.createElement('img');
-            img.src = pathArray[i];
-            // add class for css
-            if (img.src.includes("undefined")){
-                console.log("No more frames");
+            img.src = tempPath;
+
+            // Checks width to decide if a picture was loaded
+            if (img.naturalWidth<10){
+                if (debug) console.log("No more Frames");
                 break;
             }
+            // add class for css
+
             img.className = "animationFrame";
             img.alt = "Frame " + i;
             img.style.display = "none";
@@ -78,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
             changeVisibility(parentDiv.childNodes[index]);
             index = nextIndex;
         }, 1000 / framerate);
-        console.log("Animation Played");
+        if (debug) console.log("Animation Played");
     }
 
 
@@ -93,22 +109,24 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(fullPath);
 
         let pageName = fullPath.substring(fullPath.lastIndexOf('/') + 1);
-        console.log(pageName);
-
         pageName = pageName.split(".")[0];
+
+        if (debug) console.log("Current page:" + pageName);
         return pageName;
     }
 
+    // Starts the animations
 
+    let frameRate = 1;
     let currentPageName = getPageName();
-
-
 
     for (let i = 1; i <8; i++) {
         let avatar = "avatar_" + i;
         let avatarP = "avatarParent_"+i;
         loadAnimation(currentPageName ,avatar, avatarP);
+        playAnimationWithId(avatarP, frameRate);
     }
+    
 
 
 });

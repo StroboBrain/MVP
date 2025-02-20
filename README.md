@@ -27,6 +27,8 @@ Following areas are hardcoded
 - Header Text
 - displayCurrentLevel
 
+## Bad Practise
+- animation.js checks for width to decide if picture was loaded
 
 # License
 All rights reserved. 
