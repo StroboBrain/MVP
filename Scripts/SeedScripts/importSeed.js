@@ -19,7 +19,6 @@ function checkSeed(seed) {
     }
     
     console.log(seed + "is not a valid seed");
-    localStorage.setItem("reload","false");
     
     return false;
 }

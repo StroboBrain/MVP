@@ -1,13 +1,13 @@
-var maxFrames = 20;
-var debug = true;
-var debugLevel = 7;
+let maxFrames = 20;
+let debug = true;
+let debugLevel = 7;
 let level = 0;
-var frameRate = 2.3;
+let frameRate = 2.3;
 let reload = false;
 
 // Defined on load
-var animationParentsArray;
-var currentPageName;
+let animationParentsArray;
+let currentPageName;
 
 // Return the path to the frame with the name
 function generateFrameImagePath(folderName, name, index) {
@@ -160,11 +160,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
 window.addEventListener('load', () => {
     startAnimations();
-    if (localStorage.getItem("reload")==="false"){
-        localStorage.setItem("reload","true");
-        location.reload();
-
-
-    }
-    
 });
