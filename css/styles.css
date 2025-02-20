@@ -9,6 +9,7 @@
   --Buttoncolor-blue-color: #d4dfec;
   --Bordercolor-blei-color: #212121;
   --Buttoncolor-grey-color: #D4DFEC;
+  --Helptextcolor-color: #2174d9;
   font-family: 'Arimo', sans-serif;
 }
 
@@ -165,6 +166,15 @@ body {
   background-repeat: no-repeat; /* Prevents the image from repeating */
   background-size: 100%;
 
+}
+
+.helpText{
+  grid-row: 8/35;
+  grid-column: 2/25;
+  background-color: var(--Helptextcolor-color);
+  height: 100%;
+  width: 100%;
+  display: none;
 }
 
 /* End of header */

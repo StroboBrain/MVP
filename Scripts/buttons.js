@@ -10,7 +10,13 @@ function navigateToPage(pageUrl) {
 
 //TODO nicer implementation and help txt
 function helpButton(){
-    alert("Help text will follow");
+    let helpText = document.querySelector(".helpText");
+    helpText.style.display = "block";
+}
+
+function turnVisibilityOff(name){
+    let temp = document.querySelector(name);
+    temp.style.display = "none";
 }
 
 // Loads the level from local storage into the level buttton

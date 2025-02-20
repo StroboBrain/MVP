@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const viewportHeight = window.innerHeight;
   
       // Add a little overhand
-      const scaleX = (viewportWidth + 20) / 1080;
+      const scaleX = (viewportWidth) / 1080;
       const scaleY = (viewportHeight + 10) / 1920;
 
       // Scaling test might remove the +0.005

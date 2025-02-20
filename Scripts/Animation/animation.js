@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    loadAnimation("index","saturn_1", "avatarParent_1",4);
+    loadAnimation("index","avatar_1", "avatarParent_1",4);
     playAnimationWithId("avatarParent_1",1);
 
 });
