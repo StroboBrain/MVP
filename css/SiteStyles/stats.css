@@ -4,6 +4,9 @@
     border-radius: 20px;
     border-width: 8px;
     border-style: solid;
+    background-color: #D4DFEC;
+    width: 100%;
+    height: 100%;
 }
 
 .fachDescriptionBox{
@@ -26,8 +29,18 @@
 .grundlagenScale{
     grid-row:17/19;
     grid-column: 12/25;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    gap: 0px 0px;
+}
+
+.worldBackground{
+    background: #00000000;
+}
+
+.displayBarGeneral{
+    background-color: #f77d80;
     width: 100%;
     height: 100%;
-    display: grid;
-    
 }

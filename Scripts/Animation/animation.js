@@ -20,16 +20,6 @@ window.addEventListener("load", () => {
         return imagesArray;
     }
 
-    async function checkFileExists(url) {
-        try {
-            const response = await fetch(url, { method: 'HEAD' });
-            return response.ok; // Returns true if status code is 200-299
-        } catch (error) {
-            console.error("Error checking file:", error);
-            return false; // Returns false if there's an error (e.g., network issue)
-        }
-    }
-
 
     function addChildrenToParentDiv(parentDiv, pathArray,frameCount) {
         if(parentDiv.firstChild){
@@ -52,8 +42,8 @@ window.addEventListener("load", () => {
                 if (debug) console.log("No more Frames");
                 break;
             }
-            // add class for css
 
+            // add classes for css
             let className = "animationFrame " + parentDiv.id;
 
             img.className = className;
