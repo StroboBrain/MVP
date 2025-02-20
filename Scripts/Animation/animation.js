@@ -84,7 +84,6 @@ function changeVisibility(object){
     }
 }
 
-
 function isVisibil(object){
     if (!object) return false;
     return object.style.display =="block";
@@ -162,5 +161,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 window.addEventListener('load', () => {
-    startAnimations();
+    //Increase time for loading content
+    setTimeout(startAnimations, 101);
+
 });
