@@ -79,6 +79,8 @@ function changeVisibility(object){
 
 
 function isVisibil(object){
+    if (!object) return false;
+
     return object.style.display =="block";
 }
 
