@@ -4,18 +4,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // Return the path to the frame with the name
-    function generateFrameImagePath(name, index) {
-        let path = "ImageResources/Crakumas/" + name + "/frame_" + index + ".png";
+    function generateFrameImagePath(folderName, name, index) {
+        let path = "ImageResources/Avatars/"+ folderName + "/" + name + "/frame_" + index + ".png";
         console.log(path);
         return path;
     }
 
 
 
-    function generateImagePathArray(name, frameCount) {
+
+    function generateImagePathArray(folderName, name, frameCount) {
         const imagesArray = [];
         for (let i = 0; i < frameCount; i++) {
-            imagesArray.push(generateFrameImagePath(name, i));
+            imagesArray.push(generateFrameImagePath(folderName, name, i));
         }
         if (imagesArray.length !== frameCount) {
             console.error("Mismatch between imagesArray length and frameCount:", imagesArray, frameCount);
@@ -40,9 +41,9 @@ document.addEventListener('DOMContentLoaded', () => {
         activateFirstchild(parentDiv);
     }
 
-    function loadAnimation(name, parentName, frameCount) {
+    function loadAnimation(folderName, name, parentName, frameCount) {
         console.log(frameCount);
-        var imagesPathArray = generateImagePathArray(name, frameCount);
+        var imagesPathArray = generateImagePathArray(folderName, name, frameCount);
         let tempParentDiv = document.getElementById(parentName);
         addChildrenToParentDiv(tempParentDiv,imagesPathArray,frameCount);
 
@@ -81,8 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-
-    loadAnimation("Crakuma_01","avatarParent_1",4);
+    loadAnimation("index","saturn_1", "avatarParent_1",4);
     playAnimationWithId("avatarParent_1",1);
 
 });
