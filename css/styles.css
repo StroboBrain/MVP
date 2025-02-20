@@ -61,42 +61,28 @@ body {
   width: 100%;
   align-items: center;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 40px);
-  grid-template-rows: repeat(auto-fill, 40px);
+  grid-template-columns: repeat(27, 1fr);
+  grid-template-rows: repeat(48, 1fr);
   gap: 0px 0px;
 }
 
 .button{
   height: 100%;
-  border-radius: 20px;
-  border-radius: 10px;
-  border-width: 5px;
+  border-radius: 28px;
+  border-width: 8px;
   border-style: solid;
   border-color: var(--Bordercolor-blei-color);
 }
 
-/* Animation design*/
 
-.avatar{
-  grid-row: 10/30;
-  grid-column: 10/30;
-  align-items: center;
-}
 
-.animationFrame{
-  
-}
-
-#avatarParent_1{
-  display: block;
-}
 
 .displayCurrentLevelButton {
   grid-row: 8/11;
   grid-column: 7/22;
   font-family: 'Indie Flower', cursive; 
   font-weight: bold;
-  font-size: 1em;
+  font-size: 1.3em;
   background-color: transparent;
   border: none;
 }
@@ -142,6 +128,9 @@ body {
   grid-row: 2/6;
   grid-column: 7/22;
   font-weight: bold;
+
+  /* Fix Hardcode */
+  color: #212121;
   background-color: var(--Buttoncolor-red-color);
 }
 
@@ -150,7 +139,8 @@ body {
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents the image from repeating */
   background-size: 100%;
-  font-size: 0.9em;
+  font-size: 0.62em;
+  font-weight: bold;
   grid-row: 2/6;
   grid-column: 23/27;
   background-color: var(--Buttoncolor-grey-color);
@@ -159,7 +149,7 @@ body {
 .helpButton{
   grid-row: 2/6;
   grid-column: 2/6;
-  font-size: 1em;
+  font-size: 2em;
   background-color: var(--Buttoncolor-grey-color);
   background-image: url("../ImageResources/Buttons/button_question.png");
   background-position: center; /* Centers the image */
@@ -208,12 +198,14 @@ body {
 .leftArrowButton{
   grid-row: 43/48;
   grid-column: 9/14;
+  background-color: var(--Buttoncolor-yellow-color);
   background-image: url("../ImageResources/Buttons/ArrowLeftButtonCropped.png");
 }
 
 .rightArrowButton{
   grid-row: 43/48;
   grid-column: 15/20;
+  background-color: var(--Buttoncolor-yellow-color);
   background-image: url("../ImageResources/Buttons/ArrowRightButtonCropped.png");
 }
 
@@ -223,8 +215,6 @@ body {
   background-color: var(--Buttoncolor-red-color);
   background-image: url("../ImageResources/Buttons/HomeButtonCropped.png");
 }
-
-
 
 
 

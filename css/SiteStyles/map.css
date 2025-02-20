@@ -2,45 +2,63 @@
     background-image: url("/ImageResources/Backgrounds/worlds/regions/map.png");
 }
 
-
-/* Id is for the parent */
-#avatarParent_1{
-    grid-row: 5/9;
-    grid-column: 3/10;
+.avaParent_1{
+    grid-row:33/41;
+    grid-column: 2/10;
 }
 
-#avatarParent_2{
-    grid-row: 30/44;
-    grid-column: 5/9;
+.avaParent_2{
+    grid-row: 35/43;
+    grid-column: 15/23;
 }
 
-#avatarParent_3{
-    grid-row: 5/6;
-    grid-column: 7/8;
+.avaParent_3{
+    padding: 10%;
+    grid-row: 27/34;
+    grid-column: 20/26;
 }
 
-#avatarParent_4{
-    grid-row: 17/21;
-    grid-column: 3/9;
+.avaParent_4{
+    grid-row: 23/30;
+    grid-column: 5/12;
 }
 
-#avatarParent_5{
-    grid-row: 17/21;
-    grid-column: 3/9;
+.avaParent_5{
+    grid-row: 19/26;
+    grid-column: 12/19;
 }
 
-#avatarParent_6{
-    grid-row: 17/21;
-    grid-column: 3/9;
+.avaParent_6{
+    grid-row: 14/22;
+    grid-column: 2/7;
 }
 
-#avatarParent_7{
-    grid-row: 25/30;
-    grid-column: 14/20;
+.avaParent_7{
+    grid-row: 10/19;
+    grid-column: 16/26;
 }
+
+
 
 /* class is for the children */
 .avatarParent_1{
-
 }
 
+
+.avatarParent_2{
+}
+
+.avatarParent_3{
+}
+
+.avatarParent_4{
+}
+
+.avatarParent_5{
+}
+
+.avatarParent_6{
+}
+
+.avatarParent_7{
+}

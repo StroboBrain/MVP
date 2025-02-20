@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Starts the animations
 
-    let frameRate = 1;
+    let frameRate = 2.3;
     let currentPageName = getPageName();
 
     for (let i = 1; i <8; i++) {
