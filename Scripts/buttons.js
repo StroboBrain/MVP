@@ -22,18 +22,15 @@ function turnVisibilityOff(name){
 // Loads the level from local storage into the level buttton
 function loadButtonLevel() {
     // Retrieve the level from local storage
-    let level = localStorage.getItem("level");
-  
+    let buttonLevel = localStorage.getItem("level");
     // Log the level to the console
-    console.log("Level:", level, "loaded");
-  
+    console.log("Level:", buttonLevel, "loaded");
     // Find the button element
     let button = document.querySelector('.levelDisplayButton');
-  
     // Check if the button exists
     if (button) {
       // Update the button's text content
-      button.textContent = level || "0"; // Use "0" if level is null/undefined
+      button.textContent = buttonLevel || "0"; // Use "0" if level is null/undefined
     } else {
       console.error("Button with class 'levelDisplayButton' not found.");
     }
