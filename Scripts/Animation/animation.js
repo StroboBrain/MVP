@@ -74,14 +74,13 @@ window.addEventListener("load", () => {
             parentDiv.appendChild(img);
         }
 
-        activateFirstchild(parentDiv);
+        //activateFirstchild(parentDiv);
     }
 
     function loadAnimation(folderName, name, parentName) {
         var imagesPathArray = generateImagePathArray(folderName, name);
         let tempParentDiv = document.getElementById(parentName);
         addChildrenToParentDiv(tempParentDiv,imagesPathArray);
-
     }
 
     function changeVisibility(object){
@@ -90,6 +89,10 @@ window.addEventListener("load", () => {
         } else {
             object.style.display = "none";
         }
+    }
+
+    function isVisibil(object){
+        return object.style.display =="block";
     }
 
     function activateFirstchild(object){
@@ -102,10 +105,13 @@ window.addEventListener("load", () => {
         let index = 0;
         let arrayLength = parentDiv.childNodes.length;
 
+
         setInterval(() => {
             let nextIndex = (index + 1) % arrayLength;
+            if (isVisibil(parentDiv.childNodes[index])){
+                changeVisibility(parentDiv.childNodes[index]);
+            }
             changeVisibility(parentDiv.childNodes[nextIndex]);
-            changeVisibility(parentDiv.childNodes[index]);
             index = nextIndex;
         }, 1000 / framerate);
         if (debug) console.log("Animation Played");
