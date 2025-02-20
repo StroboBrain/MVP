@@ -1,5 +1,5 @@
 /**
- * Saves the input value to localStorage and returns the input as a string.
+ * Written very sleepig
  */
 
 var seed = "No seed-string loaded";
@@ -14,7 +14,7 @@ var seed = "No seed-string loaded";
 
 function checkSeed(seed) {
     // TODO decide on the length/structur of the seed currently 3 chars
-    if (seed.length==21) {
+    if (seed.length>=21) {
         return true;
     }
     
@@ -71,7 +71,6 @@ function saveStats(seedToCheck){
     temp = getIntegerValue(seedToCheck.substring(4,5));
     localStorage.setItem("Geometrie",temp);
     temp = getIntegerValue(seedToCheck.substring(5,6));
-    console.log(temp+"Zufallerino");
     localStorage.setItem("Zufall",temp);
     temp = getIntegerValue(seedToCheck.substring(6,7));
     localStorage.setItem("Prüfung",temp);
@@ -85,7 +84,7 @@ function saveWorlds(seedToCheck){
         // Get the character code for 'A' (65) and add the loop index
         let char = String.fromCharCode(65 + i);
         amount = getIntegerValue(seedToCheck.substring(index,index+1));
-        localStorage.setItem("Regoion" + char, amount);
+        localStorage.setItem("region" + char, amount);
         index+=2;
     }
 }

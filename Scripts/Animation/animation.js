@@ -1,8 +1,30 @@
 window.addEventListener("load", () => {
 
     const maxFrames = 20;
-    const defaultParentDiv = document.getElementById('avatarParent_1');
-    let debug = false;
+    let parentArray = document.querySelectorAll(".avatar");
+    const debug = true;
+    let debugLevel = 7;
+    let level = 0;
+    let currentPageName = getPageName();
+    let frameRate = 2.3;
+
+    loadLevel();
+
+    function loadLevel(){
+        level = localStorage.getItem(currentPageName) || 0;
+        // Option to debug
+        if (debugLevel) level = debugLevel;
+        if (debug) console.log("Level set a " + level); 
+    }
+
+
+    function loadAvatar(numberOfAvatars){
+        if (numberOfAvatars>7) console.warn("more then 7 avatars requested");
+        for (let i = 0; i < numberOfAvatars+1; i++) {
+            console.log("eotk" + i); // Access each element
+            // Perform actions on each element, e.g., parentArray[i].style.backgroundColor = "red";
+        }
+    }
 
     // Return the path to the frame with the name
     function generateFrameImagePath(folderName, name, index) {
@@ -79,6 +101,7 @@ window.addEventListener("load", () => {
     function playAnimation(parentDiv, framerate){
         let index = 0;
         let arrayLength = parentDiv.childNodes.length;
+
         setInterval(() => {
             let nextIndex = (index + 1) % arrayLength;
             changeVisibility(parentDiv.childNodes[nextIndex]);
@@ -97,27 +120,33 @@ window.addEventListener("load", () => {
     function getPageName(){
         // Get the full path of the current URL
         let fullPath = window.location.pathname;
-        console.log(fullPath);
-
         let pageName = fullPath.substring(fullPath.lastIndexOf('/') + 1);
         pageName = pageName.split(".")[0];
 
-        if (debug) console.log("Current page:" + pageName);
+        if (debug) console.log("Current page :" + pageName);
         return pageName;
+
     }
 
-    // Starts the animations
+    // Starts the animations TODO improve
 
-    let frameRate = 2.3;
-    let currentPageName = getPageName();
-
-    for (let i = 1; i <8; i++) {
-        let avatar = "avatar_" + i;
-        let avatarP = "avatarParent_"+i;
-        loadAnimation(currentPageName ,avatar, avatarP);
-        playAnimationWithId(avatarP, frameRate);
-    }
     
+
+    for (let i = 1; i <level+1; i++) {
+        let avatar = "avatar_" + i;
+        let avatarParentName = "avatarParent_"+i;
+        loadAnimation(currentPageName ,avatar, avatarParentName);
+
+    }
+
+    for (let i = 1; i <level+1; i++) {
+        let avatar = "avatar_" + i;
+        let avatarParentName = "avatarParent_"+i;
+        playAnimationWithId(avatarParentName, frameRate);
+    }
+
+    
+
 
 
 });
