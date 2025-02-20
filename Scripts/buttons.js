@@ -42,4 +42,8 @@ function loadLevel() {
 
 window.onload = function (){
     loadLevel();
+    let helpText = document.querySelector(".helpText");
+    helpText.textContent = "Helptext is coming to a cinema near you soon";
+    let toolbarText = document.querySelector(".headerTextButton");
+    toolbarText.textContent = "CRACKUMA-LAND";
 };
