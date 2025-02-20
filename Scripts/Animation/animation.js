@@ -1,5 +1,4 @@
-window.addEventListener("load", () => {
-
+document.addEventListener("DOMContentLoaded", () => {
     const maxFrames = 20;
     var parentArray = document.querySelectorAll(".avatar");
     const debug = true;
@@ -156,8 +155,14 @@ window.addEventListener("load", () => {
         playAnimationWithId(avatarParentName, frameRate);
     }
 
-
-
 });
 
+window.addEventListener("load", () => {
 
+    for (let i = 1; i <level+1; i++) {
+        let avatar = "avatar_" + i;
+        let avatarParentName = "avatarParent_"+i;
+        playAnimationWithId(avatarParentName, frameRate);
+    }
+    console.log("late");
+});
