@@ -1,3 +1,14 @@
 .worldBackground{
     background-image: url("/ImageResources/Backgrounds/worlds/regions/map.png");
 }
+
+#avatarParent_1{
+    grid-row: 12/21;
+    grid-column: 3/9;
+}
+
+
+#avatarParent_1{
+    grid-row: 17/21;
+    grid-column: 3/9;
+}
