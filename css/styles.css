@@ -215,13 +215,7 @@ body {
 }
 
 
-/* Animation styles*/
 
-.animationFrame {
-  position: absolute; /* Children positioned absolute to stack */
-  position: center;
-  width: 250px;
-}
 
 
 /* Not used Styles 

@@ -1,0 +1,11 @@
+.animationFrame{
+    position: center;
+    width: 100%; 
+    height: 100%;
+}
+
+#avatarParent_1{
+    grid-row: 17/21;
+    grid-column: 3/9;
+}
+
