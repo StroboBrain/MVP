@@ -5,9 +5,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Return the path to the frame with the name
     function generateFrameImagePath(name, index) {
-        console.log("../ImageResources/Crakumas/" + name + "/frame_" + index + ".png");
-        return "../ImageResources/Crakumas/" + name + "/frame_" + index + ".png";
+        let path = "../../ImageResources/Crakumas/" + name + "/frame_" + index + ".png";
+        console.log(path);
+        return path;
     }
+
 
 
     function generateImagePathArray(name, frameCount) {
