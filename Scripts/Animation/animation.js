@@ -1,11 +1,8 @@
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener("load", () => {
 
     const maxFrames = 20;
     const defaultParentDiv = document.getElementById('avatarParent_1');
-
     let debug = false;
-
-
 
     // Return the path to the frame with the name
     function generateFrameImagePath(folderName, name, index) {
@@ -35,6 +32,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     function addChildrenToParentDiv(parentDiv, pathArray,frameCount) {
+        if(parentDiv.firstChild){
+            console.log("Parent has a Child, no Image was added");
+            return;
+        }
         // Cleanup frameCount not needed anymore
         
 

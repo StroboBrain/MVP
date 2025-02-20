@@ -1,8 +1,6 @@
 .worldBackground{
-    background-image: url("../ImageResources/Backgrounds/worlds/regions/map.png");
+    background-image: url("../../ImageResources/Backgrounds/worlds/regions/map.png");
 }
-
-C:\Users\strob\Desktop\WeekWithN\MVP\ImageResources\Backgrounds\worlds\regions\map.png
 
 .avaParent_1{
     grid-row:33/41;
