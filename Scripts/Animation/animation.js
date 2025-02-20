@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+    const maxFrames = 20;
     const defaultParentDiv = document.getElementById('avatarParent_1');
 
 
@@ -6,47 +8,50 @@ document.addEventListener('DOMContentLoaded', () => {
     // Return the path to the frame with the name
     function generateFrameImagePath(folderName, name, index) {
         let path = "ImageResources/Avatars/"+ folderName + "/" + name + "/frame_" + index + ".png";
-        console.log(path);
         return path;
     }
 
-
-
-
-    function generateImagePathArray(folderName, name, frameCount) {
+    // Clean-Up Check frames earlier, max 20 frames
+    function generateImagePathArray(folderName, name) {
         const imagesArray = [];
-        for (let i = 0; i < frameCount; i++) {
+        for (let i = 0; i < maxFrames; i++) {
             imagesArray.push(generateFrameImagePath(folderName, name, i));
         }
-        if (imagesArray.length !== frameCount) {
-            console.error("Mismatch between imagesArray length and frameCount:", imagesArray, frameCount);
-        }
+    
         return imagesArray;
     }
 
 
     function addChildrenToParentDiv(parentDiv, pathArray,frameCount) {
+        // Cleanup frameCount not needed anymore
+        
+
+
+
         // Delete all children
         parentDiv.innerHTML = '';
 
-        for (let i = 0; i < frameCount; i++) {
+        for (let i = 0; i < maxFrames; i++) {
             const img = document.createElement('img');
             img.src = pathArray[i];
             // add class for css
+            if (img.src.includes("undefined")){
+                console.log("No more frames");
+                break;
+            }
             img.className = "animationFrame";
             img.alt = "Frame " + i;
             img.style.display = "none";
             parentDiv.appendChild(img);
         }
+
         activateFirstchild(parentDiv);
     }
 
-    function loadAnimation(folderName, name, parentName, frameCount) {
-        console.log(frameCount);
-        var imagesPathArray = generateImagePathArray(folderName, name, frameCount);
+    function loadAnimation(folderName, name, parentName) {
+        var imagesPathArray = generateImagePathArray(folderName, name);
         let tempParentDiv = document.getElementById(parentName);
-        addChildrenToParentDiv(tempParentDiv,imagesPathArray,frameCount);
-
+        addChildrenToParentDiv(tempParentDiv,imagesPathArray);
 
     }
 
@@ -76,16 +81,35 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log("Animation Played");
     }
 
+
     function playAnimationWithId(idName, framerate){
         let object = document.getElementById(idName);
         playAnimation(object,framerate);
     }
 
+    function getPageName(){
+        // Get the full path of the current URL
+        let fullPath = window.location.pathname;
+        console.log(fullPath);
 
-    loadAnimation("index","avatar_1", "avatarParent_1",4);
-    playAnimationWithId("avatarParent_1",1);
+        let pageName = fullPath.substring(fullPath.lastIndexOf('/') + 1);
+        console.log(pageName);
 
-    // Animation
+        pageName = pageName.split(".")[0];
+        return pageName;
+    }
+
+
+    let currentPageName = getPageName();
+
+
+
+    for (let i = 1; i <8; i++) {
+        let avatar = "avatar_" + i;
+        let avatarP = "avatarParent_"+i;
+        loadAnimation(currentPageName ,avatar, avatarP);
+    }
+
 
 });
 
