@@ -36,7 +36,6 @@ body {
 }
 
 .worldBackground {
-  
   background-image: url("../ImageResources/Backgrounds/worlds/regions/World_sea.png"); /* Ensure path is correct */
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents the image from repeating */

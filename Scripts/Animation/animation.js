@@ -67,10 +67,8 @@ document.addEventListener('DOMContentLoaded', () => {
             index = (index + 1) % arrayLength;
             changeVisibility(parentDiv.childNodes[index]);
         }, 1000 / framerate);
-
         console.log("Animation Played");
     }
-    
     loadAnimation("Crakuma_01","avatarParent_1",4);
 
 });
