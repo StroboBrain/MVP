@@ -7,11 +7,11 @@ let reload = false;
 
 // Defined on load
 let animationParentsArray;
-let currentPageName;
+let currentPageName = document.title;
 
 // Return the path to the frame with the name
 function generateFrameImagePath(folderName, name, index) {
-    let path = "ImageResources/Avatars/"+ folderName + "/" + name + "/frame_" + index + ".png";
+    let path = "ImageResources/Avatars/"+ currentPageName + "/" + name + "/frame_" + index + ".png";
     return path;
 }
 
@@ -49,10 +49,6 @@ function addChildrenToParentDiv(parentDiv, pathArray) {
     // Cleanup frameCount not needed anymore
     
 
-    // Delete all children
-    parentDiv.innerHTML = '';
-    var breaking = false;
-
     for (let i = 0; i < maxFrames; i++) {
         let tempPath = pathArray[i];
         const img = document.createElement('img');
@@ -61,7 +57,6 @@ function addChildrenToParentDiv(parentDiv, pathArray) {
         // Checks width to decide if a picture was loaded
         if (img.naturalWidth<10){
             if (debug) console.log("No more Frames");
-            breaking = true;
             break;
         }
         // add classes for css
@@ -70,7 +65,6 @@ function addChildrenToParentDiv(parentDiv, pathArray) {
         img.alt = "Frame " + i;
         img.style.display = "none";
         parentDiv.appendChild(img);
-        if (breaking) console.log("still in loop");
     }
 
 }
@@ -94,9 +88,9 @@ function activateFirstchild(object){
 }
 
 
-function loadAnimation(folderName, name, parentName) {
+function loadAnimation(folderName, name, parentNames) {
     var imagesPathArray = generateImagePathArray(folderName, name);
-    let tempParentDiv = document.getElementById(parentName);
+    let tempParentDiv = document.getElementById(parentNames);
     addChildrenToParentDiv(tempParentDiv,imagesPathArray);
 }
 
@@ -138,6 +132,7 @@ function loadAvatars(currentPageName){
     for (let i = 1; i <level+1; i++) {
     let avatar = "avatar_" + i;
     let avatarParentName = "avatarParent_"+i;
+    console.log(avatarParentName);
     loadAnimation(currentPageName,avatar, avatarParentName);
     }
 }
