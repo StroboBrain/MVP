@@ -1,6 +1,7 @@
 
 .animationFrame{
     display: none;
+
 }
 /* Style for all avatars*/
 
@@ -9,4 +10,16 @@
     display: flex;
     align-items: left;
     box-sizing: border-box;
+}
+
+.avatar_1_frame_0{
+    display: block;
+}
+
+.avatar_2_frame_0{
+    display: block;
+}
+
+.avatar_3_frame_0{
+    display: block;
 }
