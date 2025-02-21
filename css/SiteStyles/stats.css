@@ -1,3 +1,9 @@
+.displaybar{
+    width: 100%;
+    height: 100%;
+    background-color: #f77d80;
+    display: none;
+}
 
 .statsPageDefault{
     border-color: #212121;
@@ -9,19 +15,49 @@
     height: 100%;
 }
 
+.gebietTextboxen{
+    font-size: 0.5em;
+
+}
+.wertungsBoxen{
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    gap: 0px 0px;
+}
+
 .fachDescriptionBox{
+    align-items: center;
     grid-row:12/14;
     grid-column: 3/10;
     background-color: #D4DFEC;
+    
 }
+
+
+/* displaybar are used to give level info  */
+
+
 
 .scaleScale{
     grid-row:12/14;
     grid-column: 12/25;
+    grid-template-columns: repeat(7, 1fr);
     background-color: #D4DFEC;
+    align-items: center; /* Vertically center items */
+
+
+}
+
+.displayBarScale{
+    background-color: #D4DFEC;
+    display: flex;
+    align-items: center; /* Vertically center items */
+    margin-top: -20%; /* Move text up by 20 pixels */
 }
 
 .grundlagenDescriptionBox{
+    
     grid-row:17/19;
     grid-column: 3/10;
 }
@@ -29,10 +65,6 @@
 .grundlagenScale{
     grid-row:17/19;
     grid-column: 12/25;
-    align-items: center;
-    display: grid;
-    grid-template-columns: repeat(14, 1fr);
-    gap: 0px 0px;
 }
 
 .worldBackground{
@@ -40,7 +72,14 @@
 }
 
 .displayBarGeneral{
-    background-color: #f77d80;
     width: 100%;
     height: 100%;
+}
+
+
+
+.displayBarGrundlagen_0{
+    width: 100%;
+    height: 100%;
+    background-color: #f77d80;
 }
