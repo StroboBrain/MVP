@@ -1,7 +1,7 @@
-var frameRate = 2.3;
+var framerate = 2.3;
 var loopArray = [];
 var mapTitle;
-var indexToToggle = 0;
+var indexToToggle = 1;
 const constMaxFrames = 20;
 
 
@@ -14,26 +14,25 @@ function runAnimation(){
 }
 
 function activateFirstFrame(){
-    for (const item of loopArray){
-        toggleDisplayWithObject(item[0]);
+    for (let i = 0; i<loopArray.length; i++) {
+        loopArray[i][0].style.display = "block";
     }
 }
 
 
-
 function cycleThrouLoopArray(){
-
+    let arrayIndex;
+    let arrayIndexNext;
     for (let i = 0; i<loopArray.length; i++) {
         for (const item of loopArray) {
         //Make sure its a valid index
         let arrayIndex = indexToToggle%item.length;
         let arrayIndexNext = (indexToToggle+1)%item.length;
-        toggleDisplayWithObject(item[arrayIndex]);
         toggleDisplayWithObject(item[arrayIndexNext]);
+        toggleDisplayWithObject(item[arrayIndex]);
     }
     }
-    indexToToggle++;
-    indexToToggle = indexToToggle%constMaxFrames;
+    indexToToggle = (1+ indexToToggle)%constMaxFrames;
     
 }
 
@@ -53,16 +52,18 @@ function toggleDisplayWithObject(element) {
     }
 }
 
-function loopFunction(framerate) {
-    let lastTime = 0; // Time of the last frame
-    function loop(timestamp) {
-      if (timestamp - lastTime >= 1000 / framerate) {  // Check if enough time has passed
-        runAnimation(); // Call the function
-        lastTime = timestamp; // Update the last time
+function loopFunction() {
+    // Calculate the interval time in milliseconds
+    const intervalTime = 1000 / framerate;
+    // Start the interval
+    const intervalId = setInterval(async () => {
+      try {
+        cycleThrouLoopArray(); // Await the completion of the function
+      } catch (error) {
+        console.error('Error in cycleThrouLoopArray:', error);
       }
-      requestAnimationFrame(loop); // Continue the loop
-    }
-    requestAnimationFrame(loop); // Start the loop
+    }, intervalTime);
+
 }
 
 function generateLoopArray(){
@@ -75,15 +76,14 @@ function generateLoopArray(){
 }
 
 
-
+// Only window.onload function
 window.onload = function() {
+
     console.log("Page has fully loaded.");
     mapTitle = document.title;
     console.log("Pagename: " + mapTitle);
     generateLoopArray();
     activateFirstFrame();
-
-    // Add your code here
-    loopFunction(frameRate);
+    loopFunction();
 };
-  
+

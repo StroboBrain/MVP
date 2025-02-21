@@ -10,8 +10,6 @@ function activateDisplayBar(inputObject, levelsToFill){
 }
 
 
-
-
 function activateTopic(topic){
     let achievedLevels = localStorage.getItem(topic);
     activateDisplayBar(topic,achievedLevels);
