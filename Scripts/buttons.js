@@ -1,5 +1,3 @@
-
-
 function navigateToPage(pageUrl) {
     try {
         window.location.href = pageUrl;
@@ -35,11 +33,16 @@ function loadButtonLevel() {
       console.error("Button with class 'levelDisplayButton' not found.");
     }
 }
-
-window.onload = function (){
+function loadAllButtons(){
     loadButtonLevel();
+
     let helpTextToChange = document.querySelector(".helpText");
     helpTextToChange.textContent = "Helptext is coming to a cinema near you soon";
     let toolbarText = document.querySelector(".headerTextButton");
     toolbarText.textContent = "CRACKUMA-LAND";
-};
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    loadAllButtons();
+    // Your code here
+});
