@@ -1,5 +1,6 @@
 var framerate = 2.3;
 var mapTitle;
+var avatar0;
 var avatar1;
 var avatar2;
 var avatar3;
@@ -123,6 +124,8 @@ function generateLoopArray(){
 window.onload = function() {    
     mapTitle = document.title;
     console.log("Pagename: " + mapTitle);
+
+    avatar0 = document.getElementsByClassName("avatar_0_frame_0")[0];
     avatar1 = document.getElementsByClassName("avatar_1_frame_0")[0];
     avatar2 = document.getElementsByClassName("avatar_2_frame_0")[0];
     avatar3 = document.getElementsByClassName("avatar_3_frame_0")[0];
