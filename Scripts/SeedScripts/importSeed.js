@@ -66,15 +66,15 @@ function saveLevel(seedToCheck){
 
 function saveStats(seedToCheck){
     var temp = getIntegerValue(seedToCheck.substring(2,3));
-    localStorage.setItem("Grundlagen",temp);
+    localStorage.setItem("grundlagen",temp);
     temp = getIntegerValue(seedToCheck.substring(3,4));
-    localStorage.setItem("Funktionen",temp);
+    localStorage.setItem("funktionen",temp);
     temp = getIntegerValue(seedToCheck.substring(4,5));
-    localStorage.setItem("Geometrie",temp);
+    localStorage.setItem("geometrie",temp);
     temp = getIntegerValue(seedToCheck.substring(5,6));
-    localStorage.setItem("Zufall",temp);
+    localStorage.setItem("zufall",temp);
     temp = getIntegerValue(seedToCheck.substring(6,7));
-    localStorage.setItem("Prüfung",temp);
+    localStorage.setItem("prüfung",temp);
 
 }
 

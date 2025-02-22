@@ -1,3 +1,16 @@
+var helpTextString = "Q&A\n" +
+"Warum? Animierte Sticker\n" +
+"    motivieren.\n" +
+"Wie? Lerne Mathe und\n" +
+"    sammel alle Cakumas®.\n" +
+"Tipp: Klicke dich einmal\n" +
+"    durch die gesamte App.\n" +
+"Noch Fragen? Schreib mir\n" +
+"   per Instagram:\n" +
+"   @crashkurs_mathe\n";
+
+
+
 function navigateToPage(pageUrl) {
     try {
         window.location.href = pageUrl;
@@ -30,14 +43,19 @@ function loadButtonLevel() {
       // Update the button's text content
       buttonElement.textContent = buttonLevel || "0"; // Use "0" if level is null/undefined
     } else {
-      console.error("Button with class 'levelDisplayButton' not found.");
+      console.error("Button with class 'levelDisplayButton not found.");
     }
+
+
+
+
 }
 function loadAllButtons(){
     loadButtonLevel();
 
     let helpTextToChange = document.querySelector(".helpText");
-    helpTextToChange.textContent = "Helptext is coming to a cinema near you soon";
+    helpTextToChange.textContent = helpTextString;
+  
     let toolbarText = document.querySelector(".headerTextButton");
     toolbarText.textContent = "CRACKUMA-LAND";
 }

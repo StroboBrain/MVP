@@ -74,8 +74,6 @@ body {
 }
 
 
-
-
 .displayCurrentLevelButton {
   grid-row: 8/11;
   grid-column: 3/25;
@@ -149,6 +147,7 @@ body {
   grid-row: 2/6;
   grid-column: 2/6;
   font-size: 2em;
+  display: block;
   background-color: var(--Buttoncolor-grey-color);
   background-image: url("../ImageResources/Buttons/button_question.png");
   background-position: center; /* Centers the image */
@@ -164,6 +163,11 @@ body {
   height: 100%;
   width: 100%;
   display: none;
+  white-space: pre-wrap;
+  align-content: center;
+  justify-content: center;
+  padding-left:10%;
+  padding-right:10%;
 }
 
 /* End of header */

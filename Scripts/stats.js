@@ -5,6 +5,8 @@ let GeometrieLevel;
 let ZufallLevel;
 let Prüfung;
 
+let loadArray = ["grundlagen","funktionen","geometrie","zufall","prüfung"];
+
 
 
 function activateDisplayBar(inputObject, levelsToFill){
