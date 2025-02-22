@@ -2,37 +2,42 @@
     background-image: url("../../ImageResources/Backgrounds/worlds/regions/regionD.png");
 }
 
+.avaParent_0{
+    grid-row: 24/30;
+    grid-column: 5/11;
+}
+
 .avaParent_1{
-    grid-row:33/41;
-    grid-column: 2/10;
+    grid-row:33/36;
+    grid-column: 18/23;
 }
 
 .avaParent_2{
-    grid-row: 35/43;
-    grid-column: 15/23;
+    grid-row: 20/25;
+    grid-column: 14/19;
 }
 
 .avaParent_3{
-    grid-row: 27/34;
-    grid-column: 20/26;
+    grid-row: 32/34;
+    grid-column: 1/7;
 }
 
 .avaParent_4{
-    grid-row: 23/30;
-    grid-column: 5/12;
+    grid-row: 24/30;
+    grid-column: 20/24;
 }
 
 .avaParent_5{
-    grid-row: 19/26;
-    grid-column: 12/19;
+    grid-row: 35/41;
+    grid-column: 7/14;
 }
 
 .avaParent_6{
-    grid-row: 14/22;
-    grid-column: 2/7;
+    grid-row: 12/22;
+    grid-column: 6/11;
 }
 
 .avaParent_7{
-    grid-row: 10/19;
-    grid-column: 16/26;
+    grid-row: 27/32;
+    grid-column: 11/16;
 }
