@@ -8,17 +8,48 @@ var arrayIndexNext;
 var checkIndex1 = 0;
 var checkIndex2 = 0;
 var checkIndex3 = 0;
-var object1;
-var object2;
-var object3;
+
+var avatar1;
+var avatar2;
+var avatar3;
+var avatar4;
+var avatar5;
+var avatar6;
+var avatar7;
 
 
+var objectArray;
+
+var pathArray = [
+    ["ImageResources/Avatars/map/avatar_1/frame_0.png",'ImageResources/Avatars/map/avatar_1/frame_1.png','ImageResources/Avatars/map/avatar_1/frame_2.png','ImageResources/Avatars/map/avatar_1/frame_3.png'],
+    ['ImageResources/Avatars/map/avatar_2/frame_0.png',"ImageResources/Avatars/map/avatar_2/frame_1.png"],
+    ["ImageResources/Avatars/map/avatar_3/frame_1.png","ImageResources/Avatars/map/avatar_3/frame_2.png",'ImageResources/Avatars/map/avatar_3/frame_0.png'],
+    ['ImageResources/Avatars/map/avatar_4/frame_0.png',"ImageResources/Avatars/map/avatar_4/frame_1.png"],
+    ['ImageResources/Avatars/map/avatar_5/frame_0.png',"ImageResources/Avatars/map/avatar_5/frame_1.png"],
+    ['ImageResources/Avatars/map/avatar_6/frame_0.png',"ImageResources/Avatars/map/avatar_6/frame_1.png"],
+    ['ImageResources/Avatars/map/avatar_7/frame_0.png',"ImageResources/Avatars/map/avatar_7/frame_1.png"]
+
+    ]
+
+
+console.log(pathArray);
+
+// current frame, last frame
+var indexArray = [];
+
+function generateIndexArray(){
+    for (let i = 0; i<pathArray.length; i++) {
+        indexArray.push([0,pathArray[i].length-1]);
+    }
+}
 
 
 function runAnimationOfElement(){
     let elmentToToggle = "avatar_1_frame_0"
     toggleDisplay(elmentToToggle);
 }
+
+
 function runAnimation(){
     cycleThrouLoopArray();
 }
@@ -31,76 +62,14 @@ function activateFirstFrame(){
 
 function cycleThrouLoopArray(){
 
-        switch (checkIndex1) {
-            case 0:
-                object1.src = "ImageResources/Avatars/map/avatar_1/frame_1.png";
-                console.log("load switch");
-                checkIndex1++;
-                break;
-            case 1:
-                object1.src = 'ImageResources/Avatars/map/avatar_1/frame_2.png';
-                console.log(" in load switch");
-                checkIndex1++;
-                break;
-            case 2:
-                object1.src = 'ImageResources/Avatars/map/avatar_1/frame_3.png';
-                console.log(" in load switch");
-                checkIndex1++;
-                break;
-            case 3:
-                object1.src = 'ImageResources/Avatars/map/avatar_1/frame_0.png';
-                console.log(" in load switch");
-                checkIndex1 = 0;
-
-            default:
-                resultMessage = 'Value not recognized.';
-        }
-
-        switch (checkIndex2) {
-            case 0:
-                object2.src = "ImageResources/Avatars/map/avatar_2/frame_1.png";
-                checkIndex2+=1;
-                break;
-            case 1:
-                object2.src = 'ImageResources/Avatars/map/avatar_2/frame_0.png';
-                checkIndex2=0;
-                break;
-            default:
-                resultMessage = 'Value not recognized.';
-        }
-        switch (checkIndex3) {
-            case 0:
-                object3.src = "ImageResources/Avatars/map/avatar_3/frame_1.png";
-                console.log("load switch");
-                checkIndex3++;
-                break;
-            case 1:
-                object3.src = 'ImageResources/Avatars/map/avatar_3/frame_2.png';
-                console.log(" in load switch");
-                checkIndex3++;
-                break;
-            case 2:
-                object3.src = 'ImageResources/Avatars/map/avatar_3/frame_0.png';
-                console.log(" in load switch");
-                checkIndex3 = 0;
-                break;
-            default:
-                resultMessage = 'Value not recognized.';
-        }
-    
-
-
-
-
-    //Repeat for each element
-
-    for (let i = 0; i<loopArray.length; i++) {
-
-        //toggleIndex();
+    for (let i = 0; i<objectArray.length; i++) {
+        let nextIndex =indexArray[i][0];
+        let maxFrame = indexArray[i][1];
+        objectArray[i].src = pathArray[i][nextIndex];
+        nextIndex++;
+        if (nextIndex>maxFrame) nextIndex = 0;
+        indexArray[i][0] = nextIndex;
     }
-    indexToToggle = (1+indexToToggle)%constMaxFrames;
-
-    
 }
 
 
@@ -160,7 +129,6 @@ function loopFunction() {
         console.error('Error in cycleThrouLoopArray:', error);
       }
     }, intervalTime);
-
 }
 
 function generateLoopArray(){
@@ -174,17 +142,20 @@ function generateLoopArray(){
 
 
 // Only window.onload function
-window.onload = function() {
-    object1 = document.getElementsByClassName("avatar_1_frame_0")[0];
-    object2 = document.getElementsByClassName("avatar_2_frame_0")[0];
-    object3 = document.getElementsByClassName("avatar_3_frame_0")[0];
-
-
-    console.log("Page has fully loaded.");
+window.onload = function() {    
     mapTitle = document.title;
     console.log("Pagename: " + mapTitle);
-    generateLoopArray();
-    //activateFirstFrame();
+    avatar1 = document.getElementsByClassName("avatar_1_frame_0")[0];
+    avatar2 = document.getElementsByClassName("avatar_2_frame_0")[0];
+    avatar3 = document.getElementsByClassName("avatar_3_frame_0")[0];
+    avatar4 = document.getElementsByClassName("avatar_4_frame_0")[0];
+    avatar5 = document.getElementsByClassName("avatar_5_frame_0")[0];
+    avatar6 = document.getElementsByClassName("avatar_6_frame_0")[0];
+    avatar7 = document.getElementsByClassName("avatar_7_frame_0")[0];
+
+    objectArray = [avatar1,avatar2,avatar3,avatar4,avatar5,avatar6,avatar7];
+
+    generateIndexArray();
+
     loopFunction();
 };
-
