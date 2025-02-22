@@ -143,6 +143,7 @@ body {
   background-color: var(--Buttoncolor-grey-color);
 }
 
+
 .helpButton{
   grid-row: 2/6;
   grid-column: 2/6;
@@ -157,8 +158,9 @@ body {
 }
 
 .helpText{
-  grid-row: 8/35;
-  grid-column: 2/25;
+  border-radius: 20px;
+  grid-row: 8/39;
+  grid-column: 2/27;
   background-color: var(--Helptextcolor-color);
   height: 100%;
   width: 100%;
