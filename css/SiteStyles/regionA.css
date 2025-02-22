@@ -1,0 +1,43 @@
+.worldBackground{
+    background-image: url("../../ImageResources/Backgrounds/worlds/regions/regionA.png");
+}
+
+.avaParent_0{
+    grid-row:35/40;
+    grid-column: 1/7;
+}
+
+.avaParent_1{
+    grid-row:22/35;
+    grid-column: 17/20;
+}
+
+.avaParent_2{
+    grid-row: 18/20;
+    grid-column: 8/15;
+}
+
+.avaParent_3{
+    grid-row: 34/36;
+    grid-column: 20/25;
+}
+
+.avaParent_4{
+    grid-row: 19/23;
+    grid-column: 20/25;
+}
+
+.avaParent_5{
+    grid-row: 29/34;
+    grid-column: 7/15;
+}
+
+.avaParent_6{
+    grid-row: 24/29;
+    grid-column: 1/6;
+}
+
+.avaParent_7{
+    grid-row: 13/18;
+    grid-column: 15/26;
+}

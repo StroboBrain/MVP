@@ -1,0 +1,13 @@
+
+.animationFrame{
+    display: block;
+}
+/* Style for all avatars*/
+
+.avatar{
+    height: 100%;
+    display: flex;
+    align-items: left;
+    box-sizing: border-box;
+    display: none;
+}

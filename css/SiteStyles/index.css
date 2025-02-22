@@ -1,0 +1,13 @@
+.worldBackground{
+    background-image: url("../../ImageResources/Backgrounds/worlds/regions/index.png");
+}
+
+.avaParent_0{
+    grid-row: 29/40;
+    grid-column: 7/17;
+}
+
+.avaParent_1{
+    grid-row: 14/25;
+    grid-column: 16/27;
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Indie+Flower&display=swap" rel="stylesheet">
+    
+    <!-- styles -->
+
+    <link rel="stylesheet" href="css/avatarDefault.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/SiteStyles/stats.css">
+
+
+    <title>Statistik</title>
+    <!-- scripts -->
+    <script src="Scripts/buttons.js"></script>    <script src="Scripts/scaling.js"></script>
+    <script src="Scripts/stats.js"></script>
+    
+</head>
+
+<body>
+  <div class="screenRoot">
+    <div class="appRoot">
+      <!-- Div contains content-->
+      <div class="worldBackground">
+        <div class="gridContainer">
+          <!-- Header Toolbar-->
+          <div class="headerToolbar toolbarBasics"></div>
+          <button class="helpButton headerToolbarButton button" onclick="helpButton()"></button>
+          <button class="headerTextButton headerToolbarButton button"></button>
+          <button class= "headerToolbarButton levelDisplayButton button"></button>
+          <!-- Seconde Row-->
+          <button class="displayCurrentLevelButton"><b>Dein Wissensstand</b></button>
+          <!-- Display containers Avatars -->
+          <button class= "fachDescriptionBox gebietTextboxen statsPageDefault">Fach</button>
+          <button class= "scaleScale wertungsBoxen statsPageDefault"></button>
+
+          <button class= "grundlagenDescriptionBox gebietTextboxen statsPageDefault">Grundlagen</button>
+          <div class= "grundlagenScale wertungsBoxen statsPageDefault">
+            <div class="displaybar displayBarGrundlagenGeneral displayBarGrundlagen_0"></div>
+            <div class="displaybar displayBarGrundlagenGeneral displayBarGrundlagen_1"></div>
+            <div class="displaybar displayBarGrundlagenGeneral displayBarGrundlagen_2"></div>
+            <div class="displaybar displayBarGrundlagenGeneral displayBarGrundlagen_3"></div>
+            <div class="displaybar displayBarGrundlagenGeneral displayBarGrundlagen_4"></div>
+            <div class="displaybar displayBarGrundlagenGeneral displayBarGrundlagen_5"></div>
+            <div class="displaybar displayBarGrundlagenGeneral displayBarGrundlagen_6"></div>
+            <div class="displaybar displayBarGrundlagenGeneral displayBarGrundlagen_7"></div>
+            <div class="displaybar displayBarGrundlagenGeneral displayBarGrundlagen_8"></div>
+            <div class="displaybar displayBarGrundlagenGeneral displayBarGrundlagen_9"></div>
+            <div class="displaybar displayBarGrundlagenGeneral displayBarGrundlagen_10"></div>
+            <div class="displaybar displayBarGrundlagenGeneral displayBarGrundlagen_11"></div>
+            <div class="displaybar displayBarGrundlagenGeneral displayBarGrundlagen_12"></div>
+            <div class="displaybar displayBarGrundlagenGeneral displayBarGrundlagen_13"></div>
+          </div>
+
+          <button class= "grundlagenDescriptionBox gebietTextboxen statsPageDefault">Grundlagen</button>
+          <div class= "grundlagenScale wertungsBoxen statsPageDefault">
+            <div class="displaybar displayBarGrundlagenGeneral displayBarGrundlagen_0"></div>
+            <div class="displaybar displayBarGrundlagenGeneral displayBarGrundlagen_1"></div>
+            <div class="displaybar displayBarGrundlagenGeneral displayBarGrundlagen_2"></div>
+            <div class="displaybar displayBarGrundlagenGeneral displayBarGrundlagen_3"></div>
+            <div class="displaybar displayBarGrundlagenGeneral displayBarGrundlagen_4"></div>
+            <div class="displaybar displayBarGrundlagenGeneral displayBarGrundlagen_5"></div>
+            <div class="displaybar displayBarGrundlagenGeneral displayBarGrundlagen_6"></div>
+            <div class="displaybar displayBarGrundlagenGeneral displayBarGrundlagen_7"></div>
+            <div class="displaybar displayBarGrundlagenGeneral displayBarGrundlagen_8"></div>
+            <div class="displaybar displayBarGrundlagenGeneral displayBarGrundlagen_9"></div>
+            <div class="displaybar displayBarGrundlagenGeneral displayBarGrundlagen_10"></div>
+            <div class="displaybar displayBarGrundlagenGeneral displayBarGrundlagen_11"></div>
+            <div class="displaybar displayBarGrundlagenGeneral displayBarGrundlagen_12"></div>
+            <div class="displaybar displayBarGrundlagenGeneral displayBarGrundlagen_13"></div>
+          </div>
+
+          <button class= "funktionenDescriptionBox funktionenTextboxen statsPageDefault">Funktionen</button>
+          <div class= "funktionenScale wertungsBoxen statsPageDefault">
+            <div class="displaybar displayBarFunktionen displayBarFunktionen_0"></div>
+            <div class="displaybar displayBarFunktionen displayBarFunktionen_1"></div>
+            <div class="displaybar displayBarFunktionen displayBarFunktionen_2"></div>
+            <div class="displaybar displayBarFunktionen displayBarFunktionen_3"></div>
+            <div class="displaybar displayBarFunktionen displayBarFunktionen_4"></div>
+            <div class="displaybar displayBarFunktionen displayBarFunktionen_5"></div>
+            <div class="displaybar displayBarFunktionen displayBarFunktionen_6"></div>
+            <div class="displaybar displayBarFunktionen displayBarFunktionen_7"></div>
+            <div class="displaybar displayBarFunktionen displayBarFunktionen_8"></div>
+            <div class="displaybar displayBarFunktionen displayBarFunktionen_9"></div>
+            <div class="displaybar displayBarFunktionen displayBarFunktionen_10"></div>
+            <div class="displaybar displayBarFunktionen displayBarFunktionen_11"></div>
+            <div class="displaybar displayBarFunktionen displayBarFunktionen_12"></div>
+            <div class="displaybar displayBarFunktionen displayBarFunktionen_13"></div>
+          </div>
+
+
+
+
+          <div class="helpText" onclick="turnVisibilityOff('.helpText')"></div>
+
+          <!-- Navigation Toolbar -->
+          <div class="navigationToolbar toolbarBasics"></div>
+          <button class="worldButton button navigationToolbarButtons" onclick="navigateToPage('map.html')"></button>
+          <button class="leftArrowButton button navigationToolbarButtons" onclick = "navigateToPage('regionG.html')"></button>
+          <button class="rightArrowButton button navigationToolbarButtons" onclick = "navigateToPage('map.html')"></button>
+          <button class="homeButton button navigationToolbarButtons" onclick = "navigateToPage('index.html')"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

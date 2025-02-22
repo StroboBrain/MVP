@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Indie+Flower&display=swap" rel="stylesheet">
+    
+    <!-- styles -->
+
+    <link rel="stylesheet" href="css/avatarDefault.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/SiteStyles/regionD.css">
+
+
+    <!-- change stylesheet -->
+
+    <link rel="stylesheet" href="css/SiteStyles/regionD.css">
+
+    <title>regionC</title>
+    <!-- scripts -->
+    <script src="Scripts/Animation/SitePathArrays/regionD_PathArray.js"></script>
+    <script src="Scripts/buttons.js"></script>
+    <script src="Scripts/scaling.js"></script>
+    <script src="Scripts/Animation/animation.js"></script>
+</head>
+
+<body>
+  <div class="screenRoot">
+    <div class="appRoot">
+      <!-- Div contains content-->
+      <div class="worldBackground">
+        <div class="gridContainer">
+          <!-- Header Toolbar-->
+          <div class="headerToolbar toolbarBasics"></div>
+          <button class="helpButton headerToolbarButton button" onclick="helpButton()"></button>
+          <button class="headerTextButton headerToolbarButton button"></button>
+          <button class= "headerToolbarButton levelDisplayButton button"></button>
+          <!-- Seconde Row-->
+          <button class="displayCurrentLevelButton"><b>Dynamische Dünen</b></button>
+          <img src="ImageResources/Avatars/regionD/avatar_0/frame_0.png" class="avaParent_0 animationFrame avatar_0_frame_0">
+
+          <!-- 1 Avatar -->
+          <img src="ImageResources/Avatars/regionD/avatar_1/frame_0.png" class="avaParent_1 animationFrame avatar_1_frame_0">
+          <!-- 2 Avatar -->
+          <img src="ImageResources/Avatars/regionD/avatar_2/frame_0.png" class="avaParent_2 animationFrame avatar_2_frame_0">
+          <!-- 3 Avatar -->
+          <img src="ImageResources/Avatars/regionD/avatar_3/frame_0.png" class="avaParent_3 animationFrame avatar_3_frame_0">
+          <!-- 4 Avatar -->
+          <img src="ImageResources/Avatars/regionD/avatar_4/frame_0.png" class="avaParent_4 animationFrame avatar_4_frame_0">
+          <!-- 5 Avatar -->
+          <img src="ImageResources/Avatars/regionD/avatar_5/frame_0.png" class="avaParent_5 animationFrame avatar_5_frame_0">
+          <!-- 6 Avatar -->
+          <img src="ImageResources/Avatars/regionD/avatar_6/frame_0.png" class="avaParent_6 animationFrame avatar_6_frame_0">
+          <!-- 7 Avatar -->
+          <img src="ImageResources/Avatars/regionD/avatar_7/frame_0.png" class="avaParent_7 animationFrame avatar_7_frame_0">
+
+          <div class="helpText" onclick="turnVisibilityOff('.helpText')"></div>
+
+          <!-- Navigation Toolbar -->
+          <div class="navigationToolbar toolbarBasics"></div>
+
+            <!-- change navigateToPage(pagename.html) -->
+          <button class="worldButton button navigationToolbarButtons" onclick="navigateToPage('map.html')"></button>
+          <button class="leftArrowButton button navigationToolbarButtons" onclick = "navigateToPage('regionC.html')"></button>
+          <button class="rightArrowButton button navigationToolbarButtons" onclick = "navigateToPage('regionE.html')"></button>
+          <button class="homeButton button navigationToolbarButtons" onclick = "navigateToPage('stats.html')"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

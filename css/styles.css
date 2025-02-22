@@ -1,0 +1,237 @@
+* {
+  box-sizing: border-box;
+}
+
+:root{
+  --Buttoncolor-yellow-color: #fce5ae;
+  --Buttoncolor-red-color: #f77d80;
+  --Buttoncolor-blue-color: #d4dfec;
+  --Bordercolor-blei-color: #212121;
+  --Buttoncolor-grey-color: #D4DFEC;
+  --Helptextcolor-color: #2174d9;
+  font-family: 'Arimo', sans-serif;
+}
+
+body {
+  font-family: 'Arimo', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  align-items: center;
+  color: var(--Bordercolor-blei-color);
+}
+
+.screenRoot {
+  margin: 0 auto; /* Center the container */
+  /* Was developped with 100vh, might needs adjustman */
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+}
+
+/* This contaier will be resized*/
+.appRoot {
+  height: 1920px;
+  width: 1080px;
+  transform-origin: top left; /* Ensure scaling starts from the top-left corner */
+  font-size: 70px;
+}
+
+.worldBackground {
+  background-image: url("../ImageResources/Backgrounds/worlds/regions/World_sea.png"); /* Ensure path is correct */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-size: 100%;
+  height: 100%;
+  font-size: 1em;
+}
+
+
+.toolbarBasics {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 8%;
+  font-size: 1em;
+}
+
+.gridContainer{
+  height:100%;
+  width: 100%;
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(27, 1fr);
+  grid-template-rows: repeat(48, 1fr);
+  gap: 0px 0px;
+}
+
+.button{
+  height: 100%;
+  border-radius: 28px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: var(--Bordercolor-blei-color);
+}
+
+
+.displayCurrentLevelButton {
+  grid-row: 8/11;
+  grid-column: 3/25;
+  font-family: 'Indie Flower', cursive; 
+  font-weight: bold;
+  font-size: 1.3em;
+  background-color: transparent;
+  border: none;
+}
+
+
+
+/* Toolbars*/
+
+.navigationToolbar {
+  grid-row: 42/49;
+  grid-column: 1/28;
+  background-color: rgb(0, 0, 0,0.3);
+  height: 100%;
+  width: 100%;
+}
+
+
+.titelToolbar {
+  grid-row: 7/11;
+  grid-column: 1/28;
+  display: center;
+}
+
+
+
+/* Header */
+.headerToolbar{
+  grid-row: 1/7;
+  grid-column: 1/28;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(0, 0, 0, 0.3);
+}
+
+.achievedLevelButton{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 0.5em;
+}
+
+.headerTextButton{
+  font-size: 0.9em;
+  grid-row: 2/6;
+  grid-column: 7/22;
+  font-weight: bold;
+
+  /* Fix Hardcode */
+  color: #212121;
+  background-color: var(--Buttoncolor-red-color);
+}
+
+.levelDisplayButton{
+  background-image: url("../ImageResources/Buttons/button_level.png");
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-size: 100%;
+  font-size: 0.62em;
+  font-weight: bold;
+  grid-row: 2/6;
+  grid-column: 23/27;
+  background-color: var(--Buttoncolor-grey-color);
+}
+
+
+.helpButton{
+  grid-row: 2/6;
+  grid-column: 2/6;
+  font-size: 2em;
+  display: block;
+  background-color: var(--Buttoncolor-grey-color);
+  background-image: url("../ImageResources/Buttons/button_question.png");
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-size: 100%;
+
+}
+
+.helpText{
+  border-radius: 20px;
+  grid-row: 8/39;
+  grid-column: 2/27;
+  background-color: var(--Helptextcolor-color);
+  height: 100%;
+  width: 100%;
+  display: none;
+  white-space: pre-wrap;
+  align-content: center;
+  justify-content: center;
+  padding-left:10%;
+  padding-right:10%;
+}
+
+/* End of header */
+
+
+
+
+
+/* Navigation toolbar */
+
+.navigationToolbarButtons{
+  background-position: center; 
+  background-size: contain;
+  border-width: 8px;
+}
+
+.worldButton{
+  grid-row: 43/48;
+  grid-column: 3/8;
+  background-color: var(--Buttoncolor-red-color);
+  background-image: url("../ImageResources/Buttons/WorldmapButtonCropped.png");
+}
+
+.statsButton{
+  grid-row: 43/48;
+  grid-column: 21/26;
+  background-color: var(--Buttoncolor-red-color);
+  background-image: url("../ImageResources/Buttons/StatsButtonCropped.png");
+}
+
+.leftArrowButton{
+  grid-row: 43/48;
+  grid-column: 9/14;
+  background-color: var(--Buttoncolor-yellow-color);
+  background-image: url("../ImageResources/Buttons/ArrowLeftButtonCropped.png");
+}
+
+.rightArrowButton{
+  grid-row: 43/48;
+  grid-column: 15/20;
+  background-color: var(--Buttoncolor-yellow-color);
+  background-image: url("../ImageResources/Buttons/ArrowRightButtonCropped.png");
+}
+
+.homeButton{
+  grid-row: 43/48;
+  grid-column: 21/26;
+  background-color: var(--Buttoncolor-red-color);
+  background-image: url("../ImageResources/Buttons/HomeButtonCropped.png");
+}
+
+/* Stats Buttons */
+
+
+
+
+
+/* Not used Styles 
+  .settingButton{
+  background-image: url("../ImageResources/Buttons/SettingsButtonCropped.png");
+  background-size: contain; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+}
+*/
