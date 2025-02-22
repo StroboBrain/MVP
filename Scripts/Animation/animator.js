@@ -1,14 +1,5 @@
 var framerate = 2.3;
-var loopArray = [];
 var mapTitle;
-var indexToToggle = 1;
-const constMaxFrames = 20;
-var arrayIndex;
-var arrayIndexNext;
-var checkIndex1 = 0;
-var checkIndex2 = 0;
-var checkIndex3 = 0;
-
 var avatar1;
 var avatar2;
 var avatar3;
@@ -16,23 +7,11 @@ var avatar4;
 var avatar5;
 var avatar6;
 var avatar7;
-
-
 var objectArray;
 
-var pathArray = [
-    ["ImageResources/Avatars/map/avatar_1/frame_0.png",'ImageResources/Avatars/map/avatar_1/frame_1.png','ImageResources/Avatars/map/avatar_1/frame_2.png','ImageResources/Avatars/map/avatar_1/frame_3.png'],
-    ['ImageResources/Avatars/map/avatar_2/frame_0.png',"ImageResources/Avatars/map/avatar_2/frame_1.png"],
-    ["ImageResources/Avatars/map/avatar_3/frame_1.png","ImageResources/Avatars/map/avatar_3/frame_2.png",'ImageResources/Avatars/map/avatar_3/frame_0.png'],
-    ['ImageResources/Avatars/map/avatar_4/frame_0.png',"ImageResources/Avatars/map/avatar_4/frame_1.png"],
-    ['ImageResources/Avatars/map/avatar_5/frame_0.png',"ImageResources/Avatars/map/avatar_5/frame_1.png"],
-    ['ImageResources/Avatars/map/avatar_6/frame_0.png',"ImageResources/Avatars/map/avatar_6/frame_1.png"],
-    ['ImageResources/Avatars/map/avatar_7/frame_0.png',"ImageResources/Avatars/map/avatar_7/frame_1.png"]
-
-    ]
+// pathArray stored in seperate script named after the page
 
 
-console.log(pathArray);
 
 // current frame, last frame
 var indexArray = [];
@@ -139,7 +118,6 @@ function generateLoopArray(){
     } 
     
 }
-
 
 // Only window.onload function
 window.onload = function() {    
