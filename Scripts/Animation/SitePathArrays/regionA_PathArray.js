@@ -9,10 +9,8 @@ var pathArray = [
     ['ImageResources/Avatars/regionA/avatar_7/frame_0.png',"ImageResources/Avatars/regionA/avatar_7/frame_1.png","ImageResources/Avatars/regionA/avatar_7/frame_2.png","ImageResources/Avatars/regionA/avatar_7/frame_3.png","ImageResources/Avatars/regionA/avatar_7/frame_4.png","ImageResources/Avatars/regionA/avatar_7/frame_5.png","ImageResources/Avatars/regionA/avatar_7/frame_6.png","ImageResources/Avatars/regionA/avatar_7/frame_7.png","ImageResources/Avatars/regionA/avatar_7/frame_8.png","ImageResources/Avatars/regionA/avatar_7/frame_9.png","ImageResources/Avatars/regionA/avatar_7/frame_10.png","ImageResources/Avatars/regionA/avatar_7/frame_11.png"]
     ];
 
+//Add free sticker
+var localLevel = parseInt(localStorage.getItem("regionA")) + 1;
 
-var localLevel = localStorage.getItem("regionA");
-if (!localLevel) localLevle=0;
-// One sticker is free
 
-console.log(localLevel + "Level loaded");
-
+console.log(localLevel + " Level loaded");

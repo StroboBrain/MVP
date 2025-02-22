@@ -33,8 +33,6 @@ const charMap = {
 function extractQueryString() {
 
     // all levels free
-
-    return "127777777777777777777777777";
     // Get the full URL of the current page
     var currentUrl = window.location.href;
     
@@ -107,8 +105,9 @@ function saveWorlds(seedToCheck){
         // Get the character code for 'A' (65) and add the loop index
         let char = String.fromCharCode(65 + i);
         amount = getIntegerValue(seedToCheck.substring(index,index+1));
+        if (amount>7) amount = 7;
         localStorage.setItem("region" + char, amount);
-        index+=2;
+        index++;
     }
 }
 
@@ -156,12 +155,15 @@ function getIntegerValue(stringInput){
 
 function getSeed(){
 
-    
-    
     if (hasSeed()){
         return seed;
     }
     console.log("No seed-string loaded");
     return null;
 }
+
+
+
+
 loadSeed();
+setMap();

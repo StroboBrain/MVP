@@ -113,6 +113,7 @@ function loopFunction() {
 
 function generateObjectArray(){
     let tempArray = [avatar0,avatar1,avatar2,avatar3,avatar4,avatar5,avatar6,avatar7];
+    console.log("currentLevel" + localLevel);
 
     for (let i = 0; i<localLevel; i++) {
         tempArray[i].style.display = "block";
@@ -135,7 +136,6 @@ window.onload = function() {
     avatar6 = document.getElementsByClassName("avatar_6_frame_0")[0];
     avatar7 = document.getElementsByClassName("avatar_7_frame_0")[0];
 
-    //objectArray = [avatar1,avatar2,avatar3,avatar4,avatar5,avatar6,avatar7];
 
     generateObjectArray();
 

@@ -1,16 +1,16 @@
 
-let grundlagendLevel;
-let funtktionenLevel;
-let GeometrieLevel;
-let ZufallLevel;
-let Prüfung;
-
-let loadArray = ["grundlagen","funktionen","geometrie","zufall","prüfung"];
+var grundlagenLevel;
+var funtktionenLevel;
+var geometrieLevel;
+var zufallLevel;
+var pLevel;
 
 
 
 function activateDisplayBar(inputObject, levelsToFill){
     console.log(inputObject);
+    levelsToFill = parseInt(levelsToFill);
+    console.log(levelsToFill);
     for (let i = 0; i<levelsToFill;i++){
         console.log(inputObject[i])
         inputObject[i].style.display = "block";
@@ -19,25 +19,34 @@ function activateDisplayBar(inputObject, levelsToFill){
 }
 
 
-function activateTopic(topic){
-    let achievedLevels = localStorage.getItem(topic);
-    activateDisplayBar(topic,achievedLevels);
+function activateTopics(){
+    let tempEl = document.getElementsByClassName("displayBarGrundlagenGeneral");
+    activateDisplayBar(tempEl,grundlagenLevel);
+    tempEl = document.getElementsByClassName("displayBarFunktionen");
+    activateDisplayBar(tempEl,grundlagenLevel);
+    tempEl = document.getElementsByClassName("displayBarGeometrie");
+    activateDisplayBar(tempEl,grundlagenLevel);
+    tempEl = document.getElementsByClassName("displayBarZufall");
+    activateDisplayBar(tempEl,grundlagenLevel);
+    tempEl = document.getElementsByClassName("displayBarPruefung");
+    activateDisplayBar(tempEl,grundlagenLevel);
+
 }
+
 
 function loadAllStats(){
-    
-    let displayBarElements = document.getElementsByClassName('displayBarGrundlagenGeneral');
-    activateDisplayBar(displayBarElements,5);
-}
+    grundlagenLevel = localStorage.getItem("grundlagen");
+    funtktionenLevel = localStorage.getItem("funktionen");
+    geometrieLevel = localStorage.getItem("geometrie");
+    zufallLevel = localStorage.getItem("zufall");
+    pLevel = localStorage.getItem("prüfung");
 
-function loadStats(levelName, LocalStorageName){
-    levelName = LogalStorage.getItem(LocalStorageName);
 }
-
 
 
 
 document.addEventListener('DOMContentLoaded', function() {
     loadAllStats();
-    // Your code here
+    activateTopics();
+
 });

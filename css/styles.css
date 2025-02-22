@@ -8,7 +8,7 @@
   --Buttoncolor-blue-color: #d4dfec;
   --Bordercolor-blei-color: #212121;
   --Buttoncolor-grey-color: #D4DFEC;
-  --Helptextcolor-color: #2174d9;
+  --Helptextcolor-color: #f77d80;
   font-family: 'Arimo', sans-serif;
 }
 
@@ -158,7 +158,10 @@ body {
 }
 
 .helpText{
-  border-radius: 20px;
+  border-radius: 28px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: var(--Bordercolor-blei-color);
   grid-row: 8/39;
   grid-column: 2/27;
   background-color: var(--Helptextcolor-color);
@@ -168,8 +171,8 @@ body {
   white-space: pre-wrap;
   align-content: center;
   justify-content: center;
-  padding-left:10%;
-  padding-right:10%;
+  padding-left:5%;
+  padding-right:5%;
 }
 
 /* End of header */

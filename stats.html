@@ -16,11 +16,12 @@
 
     <title>Statistik</title>
     <!-- scripts -->
-    <script src="Scripts/buttons.js"></script>    <script src="Scripts/scaling.js"></script>
+    <script src="Scripts/buttons.js"></script>    
+    <script src="Scripts/scaling.js"></script>
     <script src="Scripts/stats.js"></script>
     
-</head>
 
+</head>
 <body>
   <div class="screenRoot">
     <div class="appRoot">
@@ -38,8 +39,10 @@
           <button class= "fachDescriptionBox gebietTextboxen statsPageDefault">Fach</button>
           <button class= "scaleScale wertungsBoxen statsPageDefault"></button>
 
-          <button class= "grundlagenDescriptionBox gebietTextboxen statsPageDefault">Grundlagen</button>
-          <div class= "grundlagenScale wertungsBoxen statsPageDefault">
+
+
+          <button class= "grundlagenDescriptionBox gebietTextboxen statsPageDefault display">Grundlagen</button>
+          <div class= "grundlagenScale wertungsBoxen statsPageDefault" id="grundlagenBox">
             <div class="displaybar displayBarGrundlagenGeneral displayBarGrundlagen_0"></div>
             <div class="displaybar displayBarGrundlagenGeneral displayBarGrundlagen_1"></div>
             <div class="displaybar displayBarGrundlagenGeneral displayBarGrundlagen_2"></div>
@@ -56,25 +59,7 @@
             <div class="displaybar displayBarGrundlagenGeneral displayBarGrundlagen_13"></div>
           </div>
 
-          <button class= "grundlagenDescriptionBox gebietTextboxen statsPageDefault">Grundlagen</button>
-          <div class= "grundlagenScale wertungsBoxen statsPageDefault">
-            <div class="displaybar displayBarGrundlagenGeneral displayBarGrundlagen_0"></div>
-            <div class="displaybar displayBarGrundlagenGeneral displayBarGrundlagen_1"></div>
-            <div class="displaybar displayBarGrundlagenGeneral displayBarGrundlagen_2"></div>
-            <div class="displaybar displayBarGrundlagenGeneral displayBarGrundlagen_3"></div>
-            <div class="displaybar displayBarGrundlagenGeneral displayBarGrundlagen_4"></div>
-            <div class="displaybar displayBarGrundlagenGeneral displayBarGrundlagen_5"></div>
-            <div class="displaybar displayBarGrundlagenGeneral displayBarGrundlagen_6"></div>
-            <div class="displaybar displayBarGrundlagenGeneral displayBarGrundlagen_7"></div>
-            <div class="displaybar displayBarGrundlagenGeneral displayBarGrundlagen_8"></div>
-            <div class="displaybar displayBarGrundlagenGeneral displayBarGrundlagen_9"></div>
-            <div class="displaybar displayBarGrundlagenGeneral displayBarGrundlagen_10"></div>
-            <div class="displaybar displayBarGrundlagenGeneral displayBarGrundlagen_11"></div>
-            <div class="displaybar displayBarGrundlagenGeneral displayBarGrundlagen_12"></div>
-            <div class="displaybar displayBarGrundlagenGeneral displayBarGrundlagen_13"></div>
-          </div>
-
-          <button class= "funktionenDescriptionBox funktionenTextboxen statsPageDefault">Funktionen</button>
+          <button class= "funktionenDescriptionBox gebietTextBoxen statsPageDefault display">Funktionen</button>
           <div class= "funktionenScale wertungsBoxen statsPageDefault">
             <div class="displaybar displayBarFunktionen displayBarFunktionen_0"></div>
             <div class="displaybar displayBarFunktionen displayBarFunktionen_1"></div>
@@ -92,7 +77,59 @@
             <div class="displaybar displayBarFunktionen displayBarFunktionen_13"></div>
           </div>
 
+          <button class= "geometrieDescriptionBox gebietTextBoxen statsPageDefault display">Geometrie</button>
+          <div class= "geometrieScale wertungsBoxen statsPageDefault">
+            <div class="displaybar displayBarGeometrie displayBarGeometrie_0"></div>
+            <div class="displaybar displayBarGeometrie displayBarGeometrie_1"></div>
+            <div class="displaybar displayBarGeometrie displayBarGeometrie_2"></div>
+            <div class="displaybar displayBarGeometrie displayBarGeometrie_3"></div>
+            <div class="displaybar displayBarGeometrie displayBarGeometrie_4"></div>
+            <div class="displaybar displayBarGeometrie displayBarGeometrie_5"></div>
+            <div class="displaybar displayBarGeometrie displayBarGeometrie_6"></div>
+            <div class="displaybar displayBarGeometrie displayBarGeometrie_7"></div>
+            <div class="displaybar displayBarGeometrie displayBarGeometrie_8"></div>
+            <div class="displaybar displayBarGeometrie displayBarGeometrie_9"></div>
+            <div class="displaybar displayBarGeometrie displayBarGeometrie_10"></div>
+            <div class="displaybar displayBarGeometrie displayBarGeometrie_11"></div>
+            <div class="displaybar displayBarGeometrie displayBarGeometrie_12"></div>
+            <div class="displaybar displayBarGeometrie displayBarGeometrie_13"></div>
+          </div>
 
+          <button class= "zufallDescriptionBox gebietTextBoxen statsPageDefault display">Zufall</button>
+          <div class= "zufallScale wertungsBoxen statsPageDefault">
+            <div class="displaybar displayBarZufall displayBarZufall_0"></div>
+            <div class="displaybar displayBarZufall displayBarZufall_1"></div>
+            <div class="displaybar displayBarZufall displayBarZufall_2"></div>
+            <div class="displaybar displayBarZufall displayBarZufall_3"></div>
+            <div class="displaybar displayBarZufall displayBarZufall_4"></div>
+            <div class="displaybar displayBarZufall displayBarZufall_5"></div>
+            <div class="displaybar displayBarZufall displayBarZufall_6"></div>
+            <div class="displaybar displayBarZufall displayBarZufall_7"></div>
+            <div class="displaybar displayBarZufall displayBarZufall_8"></div>
+            <div class="displaybar displayBarZufall displayBarZufall_9"></div>
+            <div class="displaybar displayBarZufall displayBarZufall_10"></div>
+            <div class="displaybar displayBarZufall displayBarZufall_11"></div>
+            <div class="displaybar displayBarZufall displayBarZufall_12"></div>
+            <div class="displaybar displayBarZufall displayBarZufall_13"></div>
+          </div>
+
+          <button class= "pruefungDescriptionBox gebietTextBoxen statsPageDefault display">Prüfung</button>
+          <div class= "pruefungScale wertungsBoxen statsPageDefault">
+            <div class="displaybar displayBarPruefung displayBarPruefung_0"></div>
+            <div class="displaybar displayBarPruefung displayBarPruefung_1"></div>
+            <div class="displaybar displayBarPruefung displayBarPruefung_2"></div>
+            <div class="displaybar displayBarPruefung displayBarPruefung_3"></div>
+            <div class="displaybar displayBarPruefung displayBarPruefung_4"></div>
+            <div class="displaybar displayBarPruefung displayBarPruefung_5"></div>
+            <div class="displaybar displayBarPruefung displayBarPruefung_6"></div>
+            <div class="displaybar displayBarPruefung displayBarPruefung_7"></div>
+            <div class="displaybar displayBarPruefung displayBarPruefung_8"></div>
+            <div class="displaybar displayBarPruefung displayBarPruefung_9"></div>
+            <div class="displaybar displayBarPruefung displayBarPruefung_10"></div>
+            <div class="displaybar displayBarPruefung displayBarPruefung_11"></div>
+            <div class="displaybar displayBarPruefung displayBarPruefung_12"></div>
+            <div class="displaybar displayBarPruefung displayBarPruefung_13"></div>
+          </div>
 
 
           <div class="helpText" onclick="turnVisibilityOff('.helpText')"></div>
