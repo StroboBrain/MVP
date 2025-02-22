@@ -23,13 +23,13 @@ function activateTopics(){
     let tempEl = document.getElementsByClassName("displayBarGrundlagenGeneral");
     activateDisplayBar(tempEl,grundlagenLevel);
     tempEl = document.getElementsByClassName("displayBarFunktionen");
-    activateDisplayBar(tempEl,grundlagenLevel);
+    activateDisplayBar(tempEl,funtktionenLevel);
     tempEl = document.getElementsByClassName("displayBarGeometrie");
-    activateDisplayBar(tempEl,grundlagenLevel);
+    activateDisplayBar(tempEl,geometrieLevel);
     tempEl = document.getElementsByClassName("displayBarZufall");
-    activateDisplayBar(tempEl,grundlagenLevel);
+    activateDisplayBar(tempEl,zufallLevel);
     tempEl = document.getElementsByClassName("displayBarPruefung");
-    activateDisplayBar(tempEl,grundlagenLevel);
+    activateDisplayBar(tempEl,pLevel);
 
 }
 
