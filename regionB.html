@@ -11,14 +11,16 @@
 
     <link rel="stylesheet" href="css/avatarDefault.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/SiteStyles/regionB.css">
+
 
     <!-- change stylesheet -->
 
     <link rel="stylesheet" href="css/SiteStyles/index.css">
 
-
-    <title>Home</title>
+    <title>RegionB</title>
     <!-- scripts -->
+    <script src="Scripts/Animation/SitePathArrays/regionB_PathArray.js"></script>
     <script src="Scripts/buttons.js"></script>
     <script src="Scripts/scaling.js"></script>
     <script src="Scripts/Animation/animation.js"></script>
@@ -36,28 +38,29 @@
           <button class="headerTextButton headerToolbarButton button"></button>
           <button class= "headerToolbarButton levelDisplayButton button"></button>
           <!-- Seconde Row-->
-           
-          <!-- change message -->
+          <button class="displayCurrentLevelButton"><b>Landkarte</b></button>
+          <!-- 1 Avatar -->
+          <img src="ImageResources/Avatars/regionB/avatar_1/frame_0.png" class="avaParent_1 animationFrame avatar_1_frame_0">
+          <!-- 2 Avatar -->
+          <img src="ImageResources/Avatars/regionB/avatar_2/frame_0.png" class="avaParent_2 animationFrame avatar_2_frame_0">
+          <!-- 3 Avatar -->
+          <img src="ImageResources/Avatars/regionB/avatar_3/frame_0.png" class="avaParent_3 animationFrame avatar_3_frame_0">
+          <!-- 4 Avatar -->
+          <img src="ImageResources/Avatars/regionB/avatar_4/frame_0.png" class="avaParent_4 animationFrame avatar_4_frame_0">
+          <!-- 5 Avatar -->
+          <img src="ImageResources/Avatars/regionB/avatar_5/frame_0.png" class="avaParent_5 animationFrame avatar_5_frame_0">
+          <!-- 6 Avatar -->
+          <img src="ImageResources/Avatars/regionB/avatar_6/frame_0.png" class="avaParent_6 animationFrame avatar_6_frame_0">
+          <!-- 7 Avatar -->
+          <img src="ImageResources/Avatars/regionB/avatar_7/frame_0.png" class="avaParent_7 animationFrame avatar_7_frame_0">
 
-          <button class="displayCurrentLevelButton"><b>Home</b></button>
-          <!-- 7 Avatars -->
-          <div class="avatar avaParent_1" id="avatarParent_1"></div>
-          <div class="avatar avaParent_2" id="avatarParent_2"></div>
-          <div class="avatar avaParent_3" id="avatarParent_3"></div>
-          <div class="avatar avaParent_4" id="avatarParent_4"></div>
-          <div class="avatar avaParent_5" id="avatarParent_5"></div>
-          <div class="avatar avaParent_6" id="avatarParent_6"></div>
-          <div class="avatar avaParent_7" id="avatarParent_7"></div>
           <div class="helpText" onclick="turnVisibilityOff('.helpText')"></div>
-
           <!-- Navigation Toolbar -->
           <div class="navigationToolbar toolbarBasics"></div>
-
-            <!-- change navigateToPage(pagename.html) -->
           <button class="worldButton button navigationToolbarButtons" onclick="navigateToPage('map.html')"></button>
-          <button class="leftArrowButton button navigationToolbarButtons" onclick = "navigateToPage('map.html')"></button>
-          <button class="rightArrowButton button navigationToolbarButtons" onclick = "navigateToPage('regionA.html')"></button>
-          <button class="homeButton button navigationToolbarButtons" onclick = "navigateToPage('stats.html')"></button>
+          <button class="leftArrowButton button navigationToolbarButtons" onclick = "navigateToPage('stats.html')"></button>
+          <button class="rightArrowButton button navigationToolbarButtons" onclick = "navigateToPage('index.html')"></button>
+          <button class="homeButton button navigationToolbarButtons" onclick = "navigateToPage('index.html')"></button>
         </div>
       </div>
     </div>
