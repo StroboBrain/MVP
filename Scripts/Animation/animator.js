@@ -1,6 +1,5 @@
 var framerate = 2.3;
 var mapTitle;
-var avatar0;
 var avatar1;
 var avatar2;
 var avatar3;
@@ -75,9 +74,9 @@ function toggleDisplayWithObject(element) {
       element.style.display = "block";
     } else {
       element.style.display = "none";
-    }
-    
+    }   
 }
+
 function getToggleStyle(elementToCheck){
 if (elementToCheck.style.display === "none") {
     return "block";
@@ -92,9 +91,6 @@ function toggleTwoElements(e1,e2){
     let e2Style = getToggleStyle(e2);
     e1.style.display = e1Style;
     e2.style.display = e2Style;
-    
-
-    
 }
 
 function loopFunction() {
@@ -113,6 +109,7 @@ function loopFunction() {
 
 function generateLoopArray(){
 
+
     for (let i = 1; i<8; i++) {
         let tempLoopOnly = document.getElementsByClassName('avaParent_' + i);
         loopArray.push(tempLoopOnly);
@@ -124,8 +121,6 @@ function generateLoopArray(){
 window.onload = function() {    
     mapTitle = document.title;
     console.log("Pagename: " + mapTitle);
-
-    avatar0 = document.getElementsByClassName("avatar_0_frame_0")[0];
     avatar1 = document.getElementsByClassName("avatar_1_frame_0")[0];
     avatar2 = document.getElementsByClassName("avatar_2_frame_0")[0];
     avatar3 = document.getElementsByClassName("avatar_3_frame_0")[0];
@@ -133,7 +128,6 @@ window.onload = function() {
     avatar5 = document.getElementsByClassName("avatar_5_frame_0")[0];
     avatar6 = document.getElementsByClassName("avatar_6_frame_0")[0];
     avatar7 = document.getElementsByClassName("avatar_7_frame_0")[0];
-
     objectArray = [avatar1,avatar2,avatar3,avatar4,avatar5,avatar6,avatar7];
 
     generateIndexArray();
