@@ -48,10 +48,9 @@
     grid-row:12/15;
     grid-column: 12/26;
     grid-template-columns: repeat(7, 1fr);
-    background-color: #D4DFEC;
     align-items: center; /* Vertically center items */
-
-
+    background-image: url("../../ImageResources/Buttons/stats_scale_textScale.png");
+    margin: auto auto;
 }
 
 .displayBarScale{
