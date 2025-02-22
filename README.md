@@ -6,6 +6,7 @@ To improve expansion, only html, css and javascript were used to create this pag
 
 
 # Pracites
+
 ## Seed
 We use a seed for dynamic content creation.
 
@@ -13,7 +14,7 @@ We use a seed for dynamic content creation.
 The seed is loaded via parameters in the url and stored in the local storage.
 
 ## Animations
-Plane javascript to cycle through the frames.
+Plane javascript for the animatin.
 
 ## Prototype
 This page is considered a prototype and not fully functional/optimised.
@@ -27,8 +28,6 @@ Following areas are hardcoded
 - Header Text
 - displayCurrentLevel
 
-## Bad Practise
-- animation.js checks for width to decide if picture was loaded
 
 # License
 All rights reserved. 
