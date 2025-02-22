@@ -75,6 +75,8 @@ function saveSeed(seedToSave){
 function saveLevel(seedToCheck){
     console.log(seedToCheck.substring(0,2));
     var currentLevel = getIntegerValue(seedToCheck.substring(0,2));
+    // Level 99 is max
+    currentLevel = Math.min(currentLevel,99);
     localStorage.setItem("level",currentLevel);
     console.log(currentLevel);
 }
