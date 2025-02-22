@@ -7,7 +7,7 @@ var avatar4;
 var avatar5;
 var avatar6;
 var avatar7;
-var objectArray;
+var objectArray = [];
 
 // pathArray stored in seperate script named after the page
 
@@ -17,6 +17,7 @@ var objectArray;
 var indexArray = [];
 
 function generateIndexArray(){
+
     for (let i = 0; i<pathArray.length; i++) {
         indexArray.push([0,pathArray[i].length-1]);
     }
@@ -107,19 +108,25 @@ function loopFunction() {
     }, intervalTime);
 }
 
-function generateLoopArray(){
 
-    for (let i = 1; i<currentLevel; i++) {
-        let tempLoopOnly = document.getElementsByClassName('avaParent_' + i);
-        loopArray.push(tempLoopOnly);
+
+function generateObjectArray(){
+
+    let tempArray = [avatar1,avatar2,avatar3,avatar4,avatar5,avatar6,avatar7];
+
+    for (let i = 0; i<currentLevel+1; i++) {
+        tempArray[i].style.display = "block";
+        objectArray.push(tempArray[i]);
     }
-
+    console.log(objectArray);
 }
 
 // Only window.onload function
 window.onload = function() {    
     mapTitle = document.title;
     console.log("Pagename: " + mapTitle);
+
+    avatar0 = document.getElementsByClassName("avatar_0_frame_0")[0];
     avatar1 = document.getElementsByClassName("avatar_1_frame_0")[0];
     avatar2 = document.getElementsByClassName("avatar_2_frame_0")[0];
     avatar3 = document.getElementsByClassName("avatar_3_frame_0")[0];
@@ -127,7 +134,10 @@ window.onload = function() {
     avatar5 = document.getElementsByClassName("avatar_5_frame_0")[0];
     avatar6 = document.getElementsByClassName("avatar_6_frame_0")[0];
     avatar7 = document.getElementsByClassName("avatar_7_frame_0")[0];
-    objectArray = [avatar1,avatar2,avatar3,avatar4,avatar5,avatar6,avatar7];
+
+    //objectArray = [avatar1,avatar2,avatar3,avatar4,avatar5,avatar6,avatar7];
+
+    generateObjectArray();
 
     generateIndexArray();
 

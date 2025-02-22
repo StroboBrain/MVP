@@ -17,7 +17,6 @@ function checkSeed(seed) {
     if (seed.length>=21) {
         return true;
     }
-    
     console.log(seed + "is not a valid seed");
     
     return false;
@@ -40,7 +39,7 @@ function extractQueryString() {
 
     if (queryString == undefined) {
         console.log("No query string found, default seed loaded: 000..");
-        return "000000000000000000000";
+        return "0000000000000000000000000000000000000000000000000000000000000000000000";
     }
 
     // Extracts the seed, only works if there is only one query parameter
@@ -49,10 +48,24 @@ function extractQueryString() {
 
 function saveSeed(seedToSave){
     seed = seedToSave;
-    localStorage.setItem("sessionSeed", seed);
-    saveLevel(seed);
-    saveStats(seed);
-    saveWorlds(seed);
+    if (seedToSave!==0){
+        localStorage.setItem("sessionSeed", seed);
+        saveLevel(seed);
+        saveStats(seed);
+        saveWorlds(seed);
+        localStorage.setItem("pageVisited","true");
+    } else {
+        localStorage.setItem("sessionSeed", seed);
+        if (localStorage.getItem("pageVisited")==="false"){
+            seed = "00000000000000000000000000000000000000000000000000000000000000000000000000";
+            saveLevel(seed);
+            saveStats(seed);
+            saveWorlds(seed);
+            localStorage.setItem("pageVisited","true");
+        }
+    }
+
+    
 }
 
 
