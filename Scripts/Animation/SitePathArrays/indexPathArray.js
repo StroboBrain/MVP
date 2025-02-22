@@ -1,0 +1,1 @@
+var currentLevel = 10;

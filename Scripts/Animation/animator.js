@@ -109,12 +109,11 @@ function loopFunction() {
 
 function generateLoopArray(){
 
-
-    for (let i = 1; i<8; i++) {
+    for (let i = 1; i<currentLevel; i++) {
         let tempLoopOnly = document.getElementsByClassName('avaParent_' + i);
         loopArray.push(tempLoopOnly);
-    } 
-    
+    }
+
 }
 
 // Only window.onload function
