@@ -3,6 +3,7 @@
  */
 
 var seed = "No seed-string loaded";
+let defaultSeed = "12777777777777777777777777777777777777777777777777777777777";
 
 
 
@@ -12,13 +13,12 @@ var seed = "No seed-string loaded";
  * Currently Seeds are 3 digits long
  */
 
-function checkSeed(seed) {
+function checkSeed(seedToChecks) {
     // TODO decide on the length/structur of the seed currently 3 chars
-    if (seed.length>=21) {
+    if (seedToChecks.length>=21) {
         return true;
     }
-    console.log(seed + "is not a valid seed");
-    
+    console.log(seedToChecks + "is not a valid seed");
     return false;
 }
 
@@ -31,15 +31,17 @@ const charMap = {
 
 
 function extractQueryString() {
+
+    // all levels free
+
+    return "127777777777777777777777777";
     // Get the full URL of the current page
     var currentUrl = window.location.href;
     
     // Split the URL to get the query string part
     var queryString = currentUrl.split("?")[1];
-
     if (queryString == undefined) {
-        console.log("No query string found, default seed loaded: 000..");
-        return "0000000000000000000000000000000000000000000000000000000000000000000000";
+        return defaultSeed;
     }
 
     // Extracts the seed, only works if there is only one query parameter
@@ -48,7 +50,7 @@ function extractQueryString() {
 
 function saveSeed(seedToSave){
     seed = seedToSave;
-    if (seedToSave!==0){
+    if (seedToSave!==defaultSeed){
         localStorage.setItem("sessionSeed", seed);
         saveLevel(seed);
         saveStats(seed);
@@ -57,7 +59,7 @@ function saveSeed(seedToSave){
     } else {
         localStorage.setItem("sessionSeed", seed);
         if (localStorage.getItem("pageVisited")==="false"){
-            seed = "00000000000000000000000000000000000000000000000000000000000000000000000000";
+            seed = defaultSeed;
             saveLevel(seed);
             saveStats(seed);
             saveWorlds(seed);
@@ -79,14 +81,19 @@ function saveLevel(seedToCheck){
 
 function saveStats(seedToCheck){
     var temp = getIntegerValue(seedToCheck.substring(2,3));
+    if (temp>7){ temp = 7};
     localStorage.setItem("grundlagen",temp);
     temp = getIntegerValue(seedToCheck.substring(3,4));
+    if (temp>7){ temp = 7};
     localStorage.setItem("funktionen",temp);
     temp = getIntegerValue(seedToCheck.substring(4,5));
+    if (temp>7){ temp = 7};
     localStorage.setItem("geometrie",temp);
     temp = getIntegerValue(seedToCheck.substring(5,6));
+    if (temp>7){ temp = 7};
     localStorage.setItem("zufall",temp);
     temp = getIntegerValue(seedToCheck.substring(6,7));
+    if (temp>7){ temp = 7};
     localStorage.setItem("prüfung",temp);
 
 }
@@ -104,24 +111,20 @@ function saveWorlds(seedToCheck){
 }
 
 function loadSeed(){
+
+    localStorage.setItem("map","7");
     var sessionSeed = extractQueryString();
     if (checkSeed(sessionSeed)) {
         saveSeed(sessionSeed);
     }
-    console.log("Seed loaded: " + seed);
+    console.log("Seed loaded: " + sessionSeed);
 }
 
 function hasSeed(){
     return seed!="No seed-string loaded";
 }
 
-function getSeed(){	
-    if (hasSeed()){
-        return seed;
-    }
-    console.log("No seed-string loaded");
-    return null;
-}
+
 
 function getSessionSeed(){
     return localStorage.getItem("sessionSeed");
@@ -149,4 +152,14 @@ function getIntegerValue(stringInput){
 
 }
 
+function getSeed(){
+
+    
+    
+    if (hasSeed()){
+        return seed;
+    }
+    console.log("No seed-string loaded");
+    return null;
+}
 loadSeed();

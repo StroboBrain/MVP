@@ -1,5 +1,6 @@
 var framerate = 2.3;
 var mapTitle;
+var avatar0;
 var avatar1;
 var avatar2;
 var avatar3;
@@ -8,6 +9,8 @@ var avatar5;
 var avatar6;
 var avatar7;
 var objectArray = [];
+var avatarsToAdd;
+
 
 // pathArray stored in seperate script named after the page
 
@@ -17,8 +20,7 @@ var objectArray = [];
 var indexArray = [];
 
 function generateIndexArray(){
-
-    for (let i = 0; i<pathArray.length; i++) {
+    for (let i = 0; i<localLevel; i++) {
         indexArray.push([0,pathArray[i].length-1]);
     }
 }
@@ -41,7 +43,6 @@ function activateFirstFrame(){
 }
 
 function cycleThrouLoopArray(){
-
     for (let i = 0; i<objectArray.length; i++) {
         let nextIndex =indexArray[i][0];
         let maxFrame = indexArray[i][1];
@@ -111,21 +112,20 @@ function loopFunction() {
 
 
 function generateObjectArray(){
+    let tempArray = [avatar0,avatar1,avatar2,avatar3,avatar4,avatar5,avatar6,avatar7];
 
-    let tempArray = [avatar1,avatar2,avatar3,avatar4,avatar5,avatar6,avatar7];
-
-    for (let i = 0; i<currentLevel+1; i++) {
+    for (let i = 0; i<localLevel; i++) {
         tempArray[i].style.display = "block";
         objectArray.push(tempArray[i]);
     }
-    console.log(objectArray);
+
 }
 
 // Only window.onload function
-window.onload = function() {    
+window.onload = function() { 
+    console.log(localLevel + "level loaded");   
     mapTitle = document.title;
-    console.log("Pagename: " + mapTitle);
-
+    
     avatar0 = document.getElementsByClassName("avatar_0_frame_0")[0];
     avatar1 = document.getElementsByClassName("avatar_1_frame_0")[0];
     avatar2 = document.getElementsByClassName("avatar_2_frame_0")[0];

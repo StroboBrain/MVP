@@ -1,1 +1,1 @@
-var currentLevel = 10;
+var localLevel = 2;
