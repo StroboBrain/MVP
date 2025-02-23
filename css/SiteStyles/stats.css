@@ -1,7 +1,13 @@
 .body{
     font-family: 'Arimo', sans-serif;
-    
 }
+
+.worldBackground{
+    background-image: url("../../ImageResources/Backgrounds/worlds/regions/stats.png");
+}
+
+
+
 
 .wertungsBoxen{
     border-color: #212121;
@@ -74,8 +80,6 @@
     grid-row:17/20;
     grid-column: 12/26;
 }
-
-.worldBackground{
     background: #00000000;
 }
 
