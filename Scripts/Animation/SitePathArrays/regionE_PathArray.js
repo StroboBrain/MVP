@@ -9,6 +9,6 @@ var pathArray = [
     ["ImageResources/Avatars/regionE/avatar_7/frame_0.png","ImageResources/Avatars/regionE/avatar_7/frame_1.png","ImageResources/Avatars/regionE/avatar_7/frame_2.png","ImageResources/Avatars/regionE/avatar_7/frame_3.png","ImageResources/Avatars/regionE/avatar_7/frame_4.png"],
 ];
 
-var localLevel = parseInt(localStorage.getItem("regionE")) + 1;
+var localLevel = parseInt(localStorage.getItem("regionE")) + 1||1;
 
 console.log(localLevel + " Level loaded");

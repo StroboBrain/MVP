@@ -10,6 +10,6 @@ var pathArray = [
 ];
 
 //Add free sticker
-var localLevel = parseInt(localStorage.getItem("regionC")) + 1;
+var localLevel = parseInt(localStorage.getItem("regionC")) + 1||1;
 
 console.log(localLevel + " Level loaded");

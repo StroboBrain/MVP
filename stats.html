@@ -32,13 +32,12 @@
           <div class="headerToolbar toolbarBasics"></div>
           <button class="helpButton headerToolbarButton button" onclick="helpButton()"></button>
           <button class="headerTextButton headerToolbarButton button"></button>
-          <button class= "headerToolbarButton levelDisplayButton button"></button>
+          <button class= "headerToolbarButton levelDisplayButton button" onclick="levelButton()"></button>
           <!-- Seconde Row-->
           <button class="displayCurrentLevelButton"><b>Dein Wissensstand</b></button>
           <!-- Display containers Avatars -->
           <button class= "fachDescriptionBox gebietTextboxen statsPageDefault">Fach</button>
           <button class= "scaleScale wertungsBoxen statsPageDefault"></button>
-
 
 
           <button class= "grundlagenDescriptionBox gebietTextboxen statsPageDefault display">Grundlagen</button>
@@ -132,7 +131,8 @@
           </div>
 
 
-          <div class="helpText" onclick="turnVisibilityOff('.helpText')"></div>
+          <div class="infoTextBox helpText" onclick="turnVisibilityOff('.helpText')"></div>
+          <div class="infoTextBox levelText" onclick="turnVisibilityOff('.levelText')"></div>
 
           <!-- Navigation Toolbar -->
           <div class="navigationToolbar toolbarBasics"></div>

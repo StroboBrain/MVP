@@ -6,7 +6,7 @@
 .wertungsBoxen{
     border-color: #212121;
     border-radius: 20px;
-    border-width: 12px;
+    border-width: 0.3em;
     border-style: solid;
 }
 
@@ -95,9 +95,6 @@
     grid-column: 12/26;
 }
 
-
-
-
 .funktionenDescriptionBox{
     grid-row:22/25;
     grid-column: 3/11;
@@ -136,8 +133,8 @@
 
 
 .displayBarGrundlagenGeneral{
-    width: 99%;
-    height: 99%;
+    width: 100%;
+    height: 100%;
     background-color: #f77d80;
     display: none;
 }

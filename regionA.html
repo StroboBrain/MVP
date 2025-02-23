@@ -32,7 +32,7 @@
           <div class="headerToolbar toolbarBasics"></div>
           <button class="helpButton headerToolbarButton button" onclick="helpButton()"></button>
           <button class="headerTextButton headerToolbarButton button"></button>
-          <button class= "headerToolbarButton levelDisplayButton button"></button>
+          <button class= "headerToolbarButton levelDisplayButton button" onclick="levelButton()"></button>
           <!-- Seconde Row-->
           <button class="displayCurrentLevelButton"><b>Antarktische Algebra
           </b></button>
@@ -53,7 +53,8 @@
           <!-- 7 Avatar -->
           <img src="ImageResources/Avatars/regionA/avatar_7/frame_0.png" class="avaParent_7 animationFrame avatar_7_frame_0">
 
-          <div class="helpText" onclick="turnVisibilityOff('.helpText')"></div>
+          <div class="infoTextBox helpText" onclick="turnVisibilityOff('.helpText')"></div>
+          <div class="infoTextBox levelText" onclick="turnVisibilityOff('.levelText')"></div>
           <!-- Navigation Toolbar -->
           <div class="navigationToolbar toolbarBasics"></div>
           <button class="worldButton button navigationToolbarButtons" onclick="navigateToPage('map.html')"></button>

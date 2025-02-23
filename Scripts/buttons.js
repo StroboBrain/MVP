@@ -10,6 +10,13 @@ var helpTextString = "Q&A\n" +
 "   @crashkurs_mathe\n";
 
 
+var frontLvl = "Du bist momentan Level ";
+var endLvl = ".\n" +
+	"Lerne Mathe, um dein Level\n" +
+	"noch weiter zu verbessern.\n" +
+	"\n";
+
+var helpTextLevel;
 
 function navigateToPage(pageUrl) {
     try {
@@ -33,23 +40,33 @@ function turnVisibilityOff(name){
 // Loads the level from local storage into the level buttton
 function loadButtonLevel() {
     // Retrieve the level from local storage
-    let buttonLevel = localStorage.getItem("level");
+    let buttonLevel = localStorage.getItem("level") || "0";
     // Log the level to the console
-    console.log("Level:", buttonLevel, "loaded");
     // Find the button element
     let buttonElement = document.querySelector('.levelDisplayButton');
     // Check if the button exists
     if (buttonElement) {
-      // Update the button's text content
-      buttonElement.textContent = buttonLevel || "0"; // Use "0" if level is null/undefined
+        // Update the button's text content
+        buttonElement.textContent = buttonLevel; // Use "0" if level is null/undefined
+        helpTextLevel = buttonLevel;
+        // Set the button's onclick event handler
+
+
     } else {
       console.error("Button with class 'levelDisplayButton not found.");
     }
 
-
-
-
 }
+function levelButton() {
+    helpTextLevel = localStorage.getItem("level");
+    let lvlButton = document.querySelector(".levelText");
+    lvlButton.style.display = "block";
+    let levelTextToChange = document.querySelector(".levelText");
+    levelTextToChange.textContent = frontLvl + helpTextLevel + endLvl;
+}
+
+
+
 function loadAllButtons(){
     loadButtonLevel();
 
@@ -58,6 +75,10 @@ function loadAllButtons(){
   
     let toolbarText = document.querySelector(".headerTextButton");
     toolbarText.textContent = "CRACKUMA-LAND";
+
+
+
+
 }
 
 document.addEventListener('DOMContentLoaded', function() {

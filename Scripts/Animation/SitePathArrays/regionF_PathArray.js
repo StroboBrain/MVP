@@ -10,6 +10,6 @@ var pathArray = [
 ];
 
 
-var localLevel = parseInt(localStorage.getItem("regionF")) + 1;
+var localLevel = parseInt(localStorage.getItem("regionF")) + 1||1;
 
 console.log(localLevel + " Level loaded");

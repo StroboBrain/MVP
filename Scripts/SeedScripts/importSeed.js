@@ -1,26 +1,24 @@
 /**
- * Written very sleepig
+ * Seed Structur per index
+ * base 36
+ * 0,1 levels
+ * 2: grundlagen
+ * 3: funktionen
+ * 4: geometrie
+ * 5: zufall
+ * 6: prüfung
+ * 8: regionA
+ * 10: regionB
+ * 12: regionC
+ * 14: regionD
+ * 16: regionE
+ * 18: regionF
+ * 20: regionG
  */
 
 var seed = "No seed-string loaded";
-let defaultSeed = "12777777777777777777777777777777777777777777777777777777777";
-
-
-
-/**
- * Takes the input value a string and checks if it is a valid seed.
- * 
- * Currently Seeds are 3 digits long
- */
-
-function checkSeed(seedToChecks) {
-    // TODO decide on the length/structur of the seed currently 3 chars
-    if (seedToChecks.length>=21) {
-        return true;
-    }
-    console.log(seedToChecks + "is not a valid seed");
-    return false;
-}
+var defaultSeed = "0000000000000000000000000000000000000000000000000000";
+const maxLevel = 7;
 
 //Lookuptable to go fast
 const charMap = {
@@ -29,19 +27,49 @@ const charMap = {
     u: 30, v: 31, w: 32, x: 33, y: 34, z: 35
 };
 
+function loadSeed(){
+    var sessionSeed = extractQueryString();
+    if (checkSeed(sessionSeed)) {
+        saveSeed(sessionSeed);
+    } else {
+        console.log("loading default seed " + defaultSeed);
+        saveSeed(defaultSeed);
+    }
+}
+
+
+function checkSeed(seedToChecks) {
+    // TODO decide on the length/structur of the seed
+    if (seedToChecks.length<20) {
+        console.log("Seed too shord");
+        localStorage.setItem("level","0");
+        return false;
+    } 
+    else if (seedToChecks.substring(0,2)==="00"){
+        console.log("No levels acheived");
+        localStorage.setItem("level","0");
+        return false;
+    }
+    console.log(seedToChecks + "is a valid seed");
+    return true;
+}
+
+function saveSeed(seedToSave){
+    seed = seedToSave;
+    saveLevel(seedToSave);
+    saveStats(seedToSave);
+    saveWorlds(seedToSave);
+}
+
 
 function extractQueryString() {
-
-    // all levels free
     // Get the full URL of the current page
     var currentUrl = window.location.href;
-    
     // Split the URL to get the query string part
     var queryString = currentUrl.split("?")[1];
-    if (queryString == undefined) {
+    if (queryString === undefined) {
         return defaultSeed;
     }
-
     // Extracts the seed, only works if there is only one query parameter
     return queryString.split("=")[1];
 }
@@ -65,7 +93,6 @@ function saveSeed(seedToSave){
         }
     }
 
-    
 }
 
 
@@ -81,19 +108,19 @@ function saveLevel(seedToCheck){
 
 function saveStats(seedToCheck){
     var temp = getIntegerValue(seedToCheck.substring(2,3));
-    if (temp>7){ temp = 7};
+    if (temp>14){ temp = 14};
     localStorage.setItem("grundlagen",temp);
     temp = getIntegerValue(seedToCheck.substring(3,4));
-    if (temp>7){ temp = 7};
+    if (temp>14){ temp = 14};
     localStorage.setItem("funktionen",temp);
     temp = getIntegerValue(seedToCheck.substring(4,5));
-    if (temp>7){ temp = 7};
+    if (temp>14){ temp = 14};
     localStorage.setItem("geometrie",temp);
     temp = getIntegerValue(seedToCheck.substring(5,6));
-    if (temp>7){ temp = 7};
+    if (temp>14){ temp = 14};
     localStorage.setItem("zufall",temp);
     temp = getIntegerValue(seedToCheck.substring(6,7));
-    if (temp>7){ temp = 7};
+    if (temp>14){ temp = 14};
     localStorage.setItem("prüfung",temp);
 
 }
@@ -107,19 +134,11 @@ function saveWorlds(seedToCheck){
         amount = getIntegerValue(seedToCheck.substring(index,index+1));
         if (amount>7) amount = 7;
         localStorage.setItem("region" + char, amount);
-        index++;
+        index+=2;
     }
 }
 
-function loadSeed(){
 
-    localStorage.setItem("map","7");
-    var sessionSeed = extractQueryString();
-    if (checkSeed(sessionSeed)) {
-        saveSeed(sessionSeed);
-    }
-    console.log("Seed loaded: " + sessionSeed);
-}
 
 function hasSeed(){
     return seed!="No seed-string loaded";
@@ -136,7 +155,9 @@ function getIntegerValue(stringInput){
     if (stringInput.length==1){
         return lookUp(stringInput);
     }
-    //Only works if the first char is a digit
+
+    if (stringInput.substring(0,1)==="0") {
+        return parseInt(lookUp(stringInput.substring(1,2),10));}
 
     // Hope you like ugly code =D =D
     var value = parseInt(lookUp(stringInput.substring(0,1),10))*36 + parseInt(lookUp(stringInput.substring(1,2),10));
@@ -154,7 +175,6 @@ function getIntegerValue(stringInput){
 }
 
 function getSeed(){
-
     if (hasSeed()){
         return seed;
     }
@@ -166,4 +186,4 @@ function getSeed(){
 
 
 loadSeed();
-setMap();
+
